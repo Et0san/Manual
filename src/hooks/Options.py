@@ -25,15 +25,106 @@ from typing import Type, Any
 # To add an option, use the before_options_defined hook below and something like this:
 #   options["total_characters_to_win_with"] = TotalCharactersToWinWith
 #
-class TotalCharactersToWinWith(Range):
-    """Instead of having to beat the game with all characters, you can limit locations to a subset of character victory locations."""
-    display_name = "Number of characters to beat the game with before victory"
+class AmountOfTokensNeeded(Range):
+    """Amount of Delivery Tokens needed to win. Please take in consideration that if you select a high number of Tokens without any of the other options, the majority of items will be progression items."""
+    display_name = "Amount of Delivery Tokens needed to win"
     range_start = 10
     range_end = 50
-    default = 50
+    default = 15
+
+class RandomizeStartingCountry(Toggle):
+    """Randomizes the starting country. Default starting country is Germany; if this option is enabled, you will instead get a random Country Key at start, which will define your starting country."""
+    display_name = "Randomize Starting Country"
+    default = 0
+
+class DLC_GoingEast(Toggle):
+    """Enables Going East DLC content."""
+    display_name = "DLC: Going East"
+    default = 0
+
+class DLC_Scandinavia(Toggle):
+    """Enables Scandinavia DLC content."""
+    display_name = "DLC: Scandinavia"
+    default = 0
+
+class DLC_France(Toggle):
+    """Enables Vive la France ! DLC content."""
+    display_name = "DLC: France"
+    default = 0
+
+class DLC_Italia(Toggle):
+    """Enables Vive la France ! DLC content."""
+    display_name = "DLC: Italia"
+    default = 0
+
+class DLC_BalticSea(Toggle):
+    """Enables Beyond the Baltic Sea DLC content."""
+    display_name = "DLC: Baltic Sea"
+    default = 0
+
+class DLC_BlackSea(Toggle):
+    """Enables Road to the Black Sea DLC content."""
+    display_name = "DLC: Black Sea"
+    default = 0
+
+class DLC_Iberia(Toggle):
+    """Enables Iberia DLC content."""
+    display_name = "DLC: Iberia"
+    default = 0
+
+class DLC_WestBalkans(Toggle):
+    """Enables West Balkans DLC content."""
+    display_name = "DLC: West Balkans"
+    default = 0
+
+class DLC_Greece(Toggle):
+    """Enables Greece DLC content."""
+    display_name = "DLC: Greece"
+    default = 0
+
+class DLC_NordicHorizons(Toggle):
+    """Enables Nordic Horizons DLC content."""
+    display_name = "DLC: Nordic Horizons"
+    default = 0
+
+class MOD_PromodsEurope(Toggle):
+    """Enables Promods Europe content."""
+    display_name = "MOD: Promods Europe"
+    default = 0
+
+class Photosanity(Toggle):
+    """Enables Photo Trophy content as locations."""
+    display_name = "Photo Trophy"
+    default = 0
+
+class Viewpointsanity(Toggle):
+    """Enables Viewpoint content as locations."""
+    display_name = "Viewpoint"
+    default = 0
+
+class LocationScouts(Toggle):
+    """Enables scouting any location."""
+    display_name = "Location Scouts"
+    default = 0
 
 # This is called before any manual options are defined, in case you want to define your own with a clean slate or let Manual define over them
 def before_options_defined(options: dict[str, Type[Option[Any]]]) -> dict[str, Type[Option[Any]]]:
+    options["amount_to_win"] = AmountOfTokensNeeded
+    options["randomize_starting_country"] = RandomizeStartingCountry
+    options["enable_going_east"] = DLC_GoingEast
+    options["enable_scandinavia"] = DLC_Scandinavia
+    options["enable_vive_la_france"] = DLC_France
+    options["enable_italia"] = DLC_Italia
+    options["enable_beyond_the_baltic_sea"] = DLC_BalticSea
+    options["enable_road_to_the_black_sea"] = DLC_BlackSea
+    options["enable_iberia"] = DLC_Iberia
+    options["enable_west_balkans"] = DLC_WestBalkans
+    options["enable_greece"] = DLC_Greece
+    options["enable_nordic_horizons"] = DLC_NordicHorizons
+    options["enable_promods_europe"] = MOD_PromodsEurope
+    options["enable_photosanity"] = Photosanity
+    options["enable_viewpointsanity"] = Viewpointsanity
+    options["enable_location_scouts"] = LocationScouts
     return options
 
 # This is called after any manual options are defined, in case you want to see what options are defined or want to modify the defined options

@@ -1,9 +1,68 @@
 {
     "$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.categories.schema.json",
-    "Example Logic only category": {
+    "DLC: Going East": {
+        "yaml_option": ["enable_going_east"],
+        "default": 0,
         "hidden": true
     },
-    "Example Yaml-option category": {
-        "yaml_option": ["DLC_enabled"]
+    "DLC: Scandinavia": {
+        "yaml_option": ["enable_scandinavia"],
+        "default": 0,
+        "hidden": true
+    },
+    "DLC: Italia": {
+        "yaml_option": ["enable_italia"],
+        "default": 0,
+        "hidden": true
+    },
+    "DLC: Iberia": {
+        "yaml_option": ["enable_iberia"],
+        "default": 0,
+        "hidden": true
+    },
+    "DLC: France": {
+        "yaml_option": ["enable_vive_la_france"],
+        "default": 0,
+        "hidden": true
+    },
+    "DLC: Black Sea": {
+        "yaml_option": ["enable_road_to_the_black_sea"],
+        "default": 0,
+        "hidden": true
+    },
+    "DLC: Baltic Sea": {
+        "yaml_option": ["enable_beyond_the_baltic_sea"],
+        "default": 0,
+        "hidden": true
+    },
+    "DLC: West Balkans": {
+        "yaml_option": ["enable_west_balkans"],
+        "default": 0,
+        "hidden": true
+    },
+    "DLC: Greece": {
+        "yaml_option": ["enable_greece"],
+        "default": 0,
+        "hidden": true
+    },
+    "DLC: Nordic Horizons": {
+        "yaml_option": ["enable_nordic_horizons"],
+        "default": 0,
+        "hidden": true
+    },
+    "Mod: Promods Europe": {
+        "yaml_option": ["enable_promods_europe"],
+        "default": 0,
+        "hidden": true
+    },
+    "Photo Trophy": {
+        "yaml_option": ["enable_photosanity"],
+        "default": 0,
+        "hidden": true
+    },
+    "Viewpoint": {
+        "yaml_option": ["enable_viewpointsanity"],
+        "default": 0,
+        "hidden": true
     }
 }

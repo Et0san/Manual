@@ -1,5 +1,4 @@
 # Object classes from AP core, to represent an entire MultiWorld and this individual World that's part of it
-from typing import Any
 from worlds.AutoWorld import World
 from BaseClasses import MultiWorld, CollectionState, Item
 
@@ -13,7 +12,7 @@ from ..Locations import ManualLocation
 from ..Data import game_table, item_table, location_table, region_table
 
 # These helper methods allow you to determine if an option has been set, or what its value is, for any player in the multiworld
-from ..Helpers import is_option_enabled, get_option_value, format_state_prog_items_key, ProgItemsCat, remove_specific_item
+from ..Helpers import is_option_enabled, get_option_value, format_state_prog_items_key, ProgItemsCat
 
 # calling logging.info("message") anywhere below in this file will output the message to both console and log file
 import logging
@@ -37,16 +36,10 @@ import logging
 def hook_get_filler_item_name(world: World, multiworld: MultiWorld, player: int) -> str | bool:
     return False
 
-def before_generate_early(world: World, multiworld: MultiWorld, player: int) -> None:
-    """
-    This is the earliest hook called during generation, before anything else is done.
-    Use it to check or modify incompatible options, or to set up variables for later use.
-    """
-    pass
-
 # Called before regions and locations are created. Not clear why you'd want this, but it's here. Victory location is included, but Victory event is not placed yet.
 def before_create_regions(world: World, multiworld: MultiWorld, player: int):
-    pass
+    if world.options.enable_road_to_the_black_sea.value == 1 and world.options.enable_going_east.value == 0 and world.options.enable_west_balkans.value == 0 and world.options.enable_greece.value == 0:
+        world.options.enable_road_to_the_black_sea.value = 0
 
 # Called after regions and locations are created, in case you want to see or modify that information. Victory location is included.
 def after_create_regions(world: World, multiworld: MultiWorld, player: int):
@@ -70,6 +63,16 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int):
 #       will create 5 items that are the "useful trap" class
 # {"Item Name": {ItemClassification.useful: 5}} <- You can also use the classification directly
 def before_create_items_all(item_config: dict[str, int|dict], world: World, multiworld: MultiWorld, player: int) -> dict[str, int|dict]:
+    # Give the player their starting Country Key
+    starting_country = "Germany"
+    if world.options.randomize_starting_country.value == 1:
+        import random
+        starting_country = random.choice(list(region_table.keys()))
+
+    starting_country_key = f"{starting_country} Key"
+    multiworld.push_precollected(multiworld.create_item(starting_country_key, player))
+    # Remove it from the pool
+    item_config[starting_country_key] = 0
     return item_config
 
 # The item pool before starting items are processed, in case you want to see the raw item pool at that stage
@@ -79,16 +82,17 @@ def before_create_items_starting(item_pool: list, world: World, multiworld: Mult
 # The item pool after starting items are processed but before filler is added, in case you want to see the raw item pool at that stage
 def before_create_items_filler(item_pool: list, world: World, multiworld: MultiWorld, player: int) -> list:
     # Use this hook to remove items from the item pool
+
+    token_count = get_option_value(multiworld, player, "amount_to_win")
+
     itemNamesToRemove: list[str] = [] # List of item names
 
-    # Add your code here to calculate which items to remove.
-    #
-    # Because multiple copies of an item can exist, you need to add an item name
-    # to the list multiple times if you want to remove multiple copies of it.
+    for i in range(100-token_count):
+        itemNamesToRemove.append("Delivery Token")
 
     for itemName in itemNamesToRemove:
         item = next(i for i in item_pool if i.name == itemName)
-        remove_specific_item(item_pool, item)
+        item_pool.remove(item)
 
     return item_pool
 
@@ -98,7 +102,7 @@ def before_create_items_filler(item_pool: list, world: World, multiworld: MultiW
     # location = next(l for l in multiworld.get_unfilled_locations(player=player) if l.name == "Location Name")
     # item_to_place = next(i for i in item_pool if i.name == "Item Name")
     # location.place_locked_item(item_to_place)
-    # remove_specific_item(item_pool, item_to_place)
+    # item_pool.remove(item_to_place)
 
 # The complete item pool prior to being set for generation is provided here, in case you want to make changes to it
 def after_create_items(item_pool: list, world: World, multiworld: MultiWorld, player: int) -> list:
@@ -112,11 +116,12 @@ def before_set_rules(world: World, multiworld: MultiWorld, player: int):
 def after_set_rules(world: World, multiworld: MultiWorld, player: int):
     # Use this hook to modify the access rules for a given location
 
-    def Example_Rule(state: CollectionState) -> bool:
-        # Calculated rules take a CollectionState object and return a boolean
-        # True if the player can access the location
-        # CollectionState is defined in BaseClasses
-        return True
+    goal_count = get_option_value(multiworld, player, "amount_to_win")
+    multiworld.completion_condition[player] = lambda state: state.count("Delivery Token", player) >= goal_count
+    for region in multiworld.get_regions(player):
+        for location in region.locations:
+            if location.name == "__Manual Game Complete__":
+                location.access_rule = lambda state: state.count("Delivery Token", player) >= goal_count
 
     ## Common functions:
     # location = world.get_location(location_name, player)
@@ -163,6 +168,7 @@ def after_remove_item(world: World, state: CollectionState, Changed: bool, item:
 
 # This is called before slot data is set and provides an empty dict ({}), in case you want to modify it before Manual does
 def before_fill_slot_data(slot_data: dict, world: World, multiworld: MultiWorld, player: int) -> dict:
+    slot_data["amount_to_win"] = get_option_value(multiworld, player, "amount_to_win") or 15
     return slot_data
 
 # This is called after slot data is set and provides the slot data at the time, in case you want to check and modify it after Manual is done with it
@@ -191,10 +197,3 @@ def before_extend_hint_information(hint_data: dict[int, dict[int, str]], world: 
 
 def after_extend_hint_information(hint_data: dict[int, dict[int, str]], world: World, multiworld: MultiWorld, player: int) -> None:
     pass
-
-def hook_interpret_slot_data(world: World, player: int, slot_data: dict[str, Any]) -> dict[str, Any]:
-    """
-        Called when Universal Tracker wants to perform a fake generation
-        Use this if you want to use or modify the slot_data for passed into re_gen_passthrough
-    """
-    return slot_data
