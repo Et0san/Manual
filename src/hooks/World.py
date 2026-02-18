@@ -1,4 +1,5 @@
 # Object classes from AP core, to represent an entire MultiWorld and this individual World that's part of it
+from typing import Any
 from worlds.AutoWorld import World
 from BaseClasses import MultiWorld, CollectionState, Item
 
@@ -12,7 +13,7 @@ from ..Locations import ManualLocation
 from ..Data import game_table, item_table, location_table, region_table
 
 # These helper methods allow you to determine if an option has been set, or what its value is, for any player in the multiworld
-from ..Helpers import is_option_enabled, get_option_value, format_state_prog_items_key, ProgItemsCat
+from ..Helpers import is_option_enabled, get_option_value, format_state_prog_items_key, ProgItemsCat, remove_specific_item
 
 # calling logging.info("message") anywhere below in this file will output the message to both console and log file
 import logging
@@ -50,6 +51,16 @@ def before_create_regions(world: World, multiworld: MultiWorld, player: int):
 
 # Called after regions and locations are created, in case you want to see or modify that information. Victory location is included.
 def after_create_regions(world: World, multiworld: MultiWorld, player: int):
+    # If scouting is enabled, allow the player to scout any location
+    if world.options.enable_location_scouts.value == 1:
+        from ..Locations import location_name_to_location
+        for region in multiworld.regions:
+            if region.player == player:
+                for location in region.locations:
+                    # Update the location_table dict so it gets written to the patchfile
+                    if location.name in location_name_to_location:
+                        location_name_to_location[location.name]["scoutable"] = True
+
     # Use this hook to remove locations from the world
     locationNamesToRemove: list[str] = [] # List of location names
 
