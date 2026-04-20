@@ -3,5 +3,5 @@
 .vs/
 /*.code-workspace
 .idea
-build.py
+build*.py
 *.apworld
