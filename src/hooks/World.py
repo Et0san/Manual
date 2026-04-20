@@ -31,7 +31,6 @@ import logging
 ########################################################################################
 
 
-
 # Use this function to change the valid filler items to be created to replace item links or starting items.
 # Default value is the `filler_item_name` from game.json
 def hook_get_filler_item_name(world: World, multiworld: MultiWorld, player: int) -> str | bool:
@@ -57,9 +56,7 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int):
 
     for region in multiworld.regions:
         if region.player == player:
-            for location in list(region.locations):
-                if location.name in locationNamesToRemove:
-                    region.locations.remove(location)
+            # TODO
 
 # This hook allows you to access the item names & counts before the items are created. Use this to increase/decrease the amount of a specific item in the pool
 # Valid item_config key/values:
@@ -70,7 +67,16 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int):
 #       will create 5 items that are the "useful trap" class
 # {"Item Name": {ItemClassification.useful: 5}} <- You can also use the classification directly
 def before_create_items_all(item_config: dict[str, int|dict], world: World, multiworld: MultiWorld, player: int) -> dict[str, int|dict]:
-    return item_config
+    starting_ship = "Kestrel A"
+    if world.options.randomize_starting_ship.value == 1:
+            import random
+            starting_ship = random.choice(list(region_table.keys()))
+
+    starting_ship_key = f"{starting_ship} Key"
+        multiworld.push_precollected(multiworld.create_item(starting_ship_key, player))
+        # Remove it from the pool
+        item_config[starting_ship_key] = 0
+        return item_config
 
 # The item pool before starting items are processed, in case you want to see the raw item pool at that stage
 def before_create_items_starting(item_pool: list, world: World, multiworld: MultiWorld, player: int) -> list:

@@ -2,26 +2,94 @@
 	"$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.events.schema.json",
     "data": [
         {
-            "name": "Marvel event",
-            "requires": "|@Right Side:all|",
+            "name": "Two achievements - Kestrel",
+            "region": "Kestrel",
             "visible": true
         },
         {
-            "name": "Capcom event",
-            "requires": "|@Left Side:all|"
+            "name": "Two achievements - Engi",
+            "region": "Engi",
+            "visible": true
         },
         {
-            "name": "Stars_event",
-            "copy_location": "Stars%"
+            "name": "Two achievements - Lanius",
+            "region": "Lanius",
+            "visible": true
         },
         {
-            "name": "X-Men Assemble",
-            "requires": "((|Wolverine|) OR |X-23|) AND |Storm| and |Magneto:1|"
+            "name": "Two achievements - Mantis",
+            "region": "Mantis",
+            "visible": true
         },
         {
-            "name": "Thunderbolts and Lightning",
-            "requires": "{CanReachLocation(Beat the Game - Storm)} and {CanReachLocation(Beat the Game - Thor)}",
-            "region": "Third Region"
+            "name": "Two achievements - Slug",
+            "region": "Slug",
+            "visible": true
+        },
+        {
+            "name": "Two achievements - Rock",
+            "region": "Rock",
+            "visible": true
+        },
+        {
+            "name": "Two achievements - Zoltan",
+            "region": "Zoltan",
+            "visible": true
+        },
+        {
+            "name": "Two achievements - Crystal",
+            "region": "Crystal",
+            "visible": true
+        },
+        {
+            "name": "Two achievements - Stealth",
+            "region": "Stealth",
+            "visible": true
+        },
+        {
+            "name": "Two achievements - Federation",
+            "region": "Federation",
+            "visible": true
+        },
+        {
+            "name": "Reach final sector - Kestrel B",
+            "region": "Kestrel B",
+            "visible": true
+        },
+        {
+            "name": "Reach final sector - Engi B",
+            "region": "Engi B",
+            "visible": true
+        },
+        {
+            "name": "Reach final sector - Federation B",
+            "region": "Federation B",
+            "visible": true
+        },
+        {
+            "name": "Reach final sector - Zoltan B",
+            "region": "Zoltan B",
+            "visible": true
+        },
+        {
+            "name": "Reach final sector - Stealth B",
+            "region": "Stealth B",
+            "visible": true
+        },
+        {
+            "name": "Reach final sector - Rock B",
+            "region": "Rock B",
+            "visible": true
+        },
+        {
+            "name": "Reach final sector - Slug B",
+            "region": "Slug B",
+            "visible": true
+        },
+        {
+            "name": "Reach final sector - Mantis B",
+            "region": "Mantis B",
+            "visible": true
         }
     ]
 }

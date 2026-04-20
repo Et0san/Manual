@@ -2,7 +2,7 @@
     "$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.game.schema.json",
     "game": "FTL: Faster Than Light",
     "creator": "eto",
-    "filler_item_name": "0 Scrap",
+    "filler_item_name": "0 scrap",
     "starting_items": [],
     "death_link": true,
     "starting_index": 1,

@@ -1,21 +1,15 @@
-# Manual Randomizer Setup Guide
+# FTL Manual Randomizer Setup Guide
 
 ## Required Software
 
-- None
+- FTL: Faster Than Light
 
 ## Installation Procedures
 
-Needs content.
+- Copy `~/Documents/My Games/FasterThanLight/ae_prof.sav` somewhere else if you wish to keep your game progression.
+- Disable Steam Cloud if you wish to keep your cloud save intact.
+- Download [this save file](<TODO mettre lien vers le fichier dans ce repo>) and put it in `~/Documents/My Games/FasterThanLight/`.
 
 ## Joining a MultiWorld Game
 
-Needs content.
-
-## Multiplayer Manual
-
-Needs content.
-
-## Game Troubleshooting
-
-Needs content.
+Prepare an options YAML, and send it alongside with this APWorld to your multiworld host.

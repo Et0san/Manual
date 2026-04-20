@@ -1,18 +1,101 @@
 {
     "$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.regions.schema.json",
-    "ExampleRegion":{
-        "connects_to": ["Second Region"],
-        "requires": "|Ryu| or {YamlCompare(Example_Range >= example )}",
-        "starting": true
+    "Menu":{
+        "starting": true,
+        "connects_to": ["Kestrel", "Engi", "Lanius", "Mantis", "Slug", "Rock", "Zoltan", "Crystal", "Stealth", "Federation"]
     },
-    "Second Region": {
-        "requires": "|@Characters:1|",
-        "connects_to": ["Third Region"],
-        "exit_requires": {
-            "Third Region": "|@Characters:5|"
-        }
+    "Kestrel": {
+        "connects_to": ["Kestrel B", "Kestrel C"],
+        "requires": "|Kestrel Key|"
     },
-    "Third Region": {
-        "connects_to": []
+    "Engi": {
+        "connects_to": ["Engi B", "Engi C"],
+        "requires": "|Engi Key| and |Drone Control blueprint|"
+    },
+    "Lanius": {
+        "connects_to": ["Lanius B"],
+        "requires": "|Lanius Key| and |Clone Bay blueprint| and |Hacking blueprint|"
+    },
+    "Mantis": {
+        "connects_to": ["Mantis B", "Mantis C"],
+        "requires": "|Mantis Key| and |Crew Teleporter blueprint|"
+    },
+    "Slug": {
+        "connects_to": ["Slug B", "Slug C"],
+        "requires": "|Slug Key|"
+    },
+    "Rock": {
+        "connects_to": ["Rock B", "Rock C"],
+        "requires": "|Rock Key|"
+    },
+    "Zoltan": {
+        "connects_to": ["Zoltan B", "Zoltan C"],
+        "requires": "|Zoltan Key|"
+    },
+    "Crystal": {
+        "connects_to": ["Crystal B"],
+        "requires": "|Crystal Key|"
+    },
+    "Stealth": {
+        "connects_to": ["Stealth B", "Stealth C"],
+        "requires": "|Stealth Key| and |Cloaking blueprint|"
+    },
+    "Federation": {
+        "connects_to": ["Federation B", "Federation C"],
+        "requires": "|Federation Key| and |Artillery Beam blueprint| and |Crew Teleporter blueprint|"
+    },
+    "Kestrel B": {
+        "requires": "|Two achievements - Kestrel|"
+    },
+    "Kestrel C": {
+        "requires": "|Reach final sector - Kestrel B| and |Clone Bay blueprint|"
+    },
+    "Engi B": {
+        "requires": "|Two achievements - Engi|"
+    },
+    "Engi C": {
+        "requires": "|Reach final sector - Engi B| and |Clone Bay blueprint| and |Hacking blueprint|"
+    },
+    "Federation B": {
+        "requires": "|Two achievements - Federation| and |Artillery Beam blueprint|"
+    },
+    "Federation C": {
+        "requires": "|Reach final sector - Federation B| and |Flak Artillery blueprint| and |Clone Bay blueprint|"
+    },
+    "Zoltan B": {
+        "requires": "|Two achievements - Zoltan|"
+    },
+    "Zoltan C": {
+        "requires": "|Reach final sector - Zoltan B| and |Clone Bay blueprint| and |Drone Control blueprint| and |Backup Battery blueprint|"
+    },
+    "Lanius B": {
+        "requires": "|Two achievements - Lanius| and |Crew Teleporter blueprint|"
+    },
+    "Stealth B": {
+        "requires": "|Two achievements - Stealth|"
+    },
+    "Stealth C": {
+        "requires": "|Reach final sector - Stealth B| and |Clone Bay blueprint| and |Drone Control blueprint|"
+    },
+    "Rock B": {
+        "requires": "|Two achievements - Rock|"
+    },
+    "Rock C": {
+        "requires": "|Reach final sector - Rock B| and |Clone Bay blueprint|"
+    },
+    "Slug B": {
+        "requires": "|Two achievements - Slug| and |Cloaking blueprint|"
+    },
+    "Slug C": {
+        "requires": "|Reach final sector - Slug B| and |Clone Bay blueprint| and |Hacking blueprint|"
+    },
+    "Mantis B": {
+        "requires": "|Two achievements - Mantis|"
+    },
+    "Mantis C": {
+        "requires": "|Reach final sector - Mantis B| and |Clone Bay blueprint|"
+    },
+    "Crystal B": {
+        "requires": "|Two achievements - Crystal| and |Cloaking blueprint| and |Crew Teleporter blueprint|"
     }
 }

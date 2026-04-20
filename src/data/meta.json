@@ -27,10 +27,7 @@
                 }
             ],
             "_options_presets": {
-                "Easy":{
-                    "Option1": true,
-                    "Option2": "potato"
-                }
+                
             }
         }
     }

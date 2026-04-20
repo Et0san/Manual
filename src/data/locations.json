@@ -1,289 +1,2184 @@
 {
-	"$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.locations.schema.json",
+    "$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.locations.schema.json",
     "data": [
         {
-            "name": "Example_Range decide the amount of items required for this location",
-            "requires": "{OptionCount(Item Name for OptionCount Example, Example_Range)}"
+            "name": "The United Federation",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Kestrel",
+            "sort-key": "row-0-0"
         },
         {
-            "name": "Beat the Game - Ryu",
-            "category": ["Starter Team", "Left Side"],
-            "region": "ExampleRegion",
-            "scoutable": true
+            "name": "Full Arsenal",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Kestrel",
+            "sort-key": "row-0-1"
         },
         {
-            "name": "Beat the Game - Chun-Li",
-            "category": ["Starter Team", "Left Side"],
-            "requires": "|Chun-Li| or {YamlCompare(Example_Choice == 1)}"
+            "name": "Tough Little Ship",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Kestrel",
+            "sort-key": "row-0-2"
         },
         {
-            "name": "Beat the Game - Akuma",
-            "category": ["Starter Team", "Left Side"],
-            "requires": "|Akuma| or {YamlCompare(Example_Toggle != True)}"
-        },
-
-        {
-            "name": "Beat the Game - Jill",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Jill| and {ItemValue(star:5)}"
+            "name": "Robotic Warfare",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Engi",
+            "sort-key": "row-1-0"
         },
         {
-            "name": "Beat the Game - Shuma-Gorath",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Shuma-Gorath|",
-            "hint_entrance": "Unlock Shuma-Gorath"
+            "name": "I hardly lifted a finger",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Engi",
+            "sort-key": "row-1-1"
         },
         {
-            "name": "Beat the Game - Nemesis T-Type",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Nemesis T-Type|"
+            "name": "The guns... They've stopped",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Engi",
+            "sort-key": "row-1-2"
         },
         {
-            "name": "Beat the Game - Firebrand",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Firebrand|"
+            "name": "Master of Patience",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Federation",
+            "sort-key": "row-2-0"
         },
         {
-            "name": "Beat the Game - Strider Hiryu",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Strider Hiryu|"
+            "name": "Diplomatic Immunity",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Federation",
+            "sort-key": "row-2-1"
         },
         {
-            "name": "Beat the Game - Phoenix Wright",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Phoenix Wright|"
+            "name": "Artillery Mastery",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Federation",
+            "sort-key": "row-2-2"
         },
         {
-            "name": "Beat the Game - Nova",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Nova|"
+            "name": "Shields Holding",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Zoltan",
+            "sort-key": "row-3-0"
         },
         {
-            "name": "Beat the Game - Ghost Rider",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Ghost Rider|"
+            "name": "Givin' her all she's got, Captain!",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Zoltan",
+            "sort-key": "row-3-1"
         },
         {
-            "name": "Beat the Game - Hawkeye",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Hawkeye|"
+            "name": "Manpower",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Zoltan",
+            "sort-key": "row-3-2"
         },
         {
-            "name": "Beat the Game - Doctor Strange",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Doctor Strange|"
+            "name": "Advanced Mastery",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Lanius",
+            "sort-key": "row-4-0"
         },
         {
-            "name": "Beat the Game - Chris",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Chris|"
+            "name": "Scrap Hoarder",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Lanius",
+            "sort-key": "row-4-1"
         },
         {
-            "name": "Beat the Game - Arthur",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Arthur|"
+            "name": "Loss of Cabin Pressure",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Lanius",
+            "sort-key": "row-4-2"
         },
         {
-            "name": "Beat the Game - Frank West",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Frank West|"
+            "name": "Bird of Prey",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Stealth",
+            "sort-key": "row-5-0"
         },
         {
-            "name": "Beat the Game - Vergil",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Vergil|"
+            "name": "Phase Shift",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Stealth",
+            "sort-key": "row-5-1"
         },
         {
-            "name": "Beat the Game - Iron Fist",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Iron Fist|"
+            "name": "Tactical Approach",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Stealth",
+            "sort-key": "row-5-2"
         },
         {
-            "name": "Beat the Game - Rocket Raccoon",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Rocket Raccoon|"
+            "name": "Is it warm in here?",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Rock",
+            "sort-key": "row-6-0"
         },
         {
-            "name": "Beat the Game - Captain America",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Captain America|"
+            "name": "Defense Drones Don't Do D'anything!",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Rock",
+            "sort-key": "row-6-1"
         },
         {
-            "name": "Beat the Game - Dormammu",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Dormammu|"
+            "name": "Ancestry",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Rock",
+            "sort-key": "row-6-2"
         },
         {
-            "name": "Beat the Game - Wesker",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Wesker|"
+            "name": "We're in position!",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Slug",
+            "sort-key": "row-7-0"
         },
         {
-            "name": "Beat the Game - Zero",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Zero|"
+            "name": "Home Sweet Home",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Slug",
+            "sort-key": "row-7-1"
         },
         {
-            "name": "Beat the Game - Dante",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Dante|"
+            "name": "Disintegration Ray",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Slug",
+            "sort-key": "row-7-2"
         },
         {
-            "name": "Beat the Game - Deadpool",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Deadpool| or {YamlEnabled(start_with_deadpool)}"
+            "name": "Take no prisoners!",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Mantis",
+            "sort-key": "row-8-0"
         },
         {
-            "name": "Beat the Game - Wolverine",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Wolverine|"
+            "name": "Avast, ye scurvy dogs!",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Mantis",
+            "sort-key": "row-8-1"
         },
         {
-            "name": "Beat the Game - Iron Man",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Iron Man|"
+            "name": "Battle Royale",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Mantis",
+            "sort-key": "row-8-2"
         },
         {
-            "name": "Beat the Game - Doctor Doom",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Doctor Doom|"
+            "name": "Sweet Revenge",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Crystal",
+            "sort-key": "row-9-0"
         },
         {
-            "name": "Beat the Game - Morrigan",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Morrigan|"
+            "name": "No Escape",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Crystal",
+            "sort-key": "row-9-1"
         },
         {
-            "name": "Beat the Game - Tron",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Tron|"
+            "name": "Clash of the Titans",
+            "category": [
+                "Ship achievements"
+            ],
+            "region": "Crystal",
+            "sort-key": "row-9-2"
         },
         {
-            "name": "Beat the Game - Trish",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Trish|"
+            "name": "Kestrel A: Reach sector 1",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Kestrel",
+            "sort-key": "row-10-0"
         },
         {
-            "name": "Beat the Game - X-23",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|X-23|"
+            "name": "Kestrel A: Reach sector 2",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Kestrel",
+            "sort-key": "row-10-1"
         },
         {
-            "name": "Beat the Game - Storm",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Storm|"
+            "name": "Kestrel A: Reach sector 3",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Kestrel",
+            "sort-key": "row-10-2"
         },
         {
-            "name": "Beat the Game - Thor",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Thor|"
+            "name": "Kestrel A: Reach sector 4",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Kestrel",
+            "sort-key": "row-10-3"
         },
         {
-            "name": "Beat the Game - M.O.D.O.K.",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|M.O.D.O.K.|"
+            "name": "Kestrel A: Reach sector 5",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Kestrel",
+            "sort-key": "row-10-4"
         },
         {
-            "name": "Beat the Game - Felicia",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Felicia|"
+            "name": "Kestrel A: Reach sector 6",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Kestrel",
+            "sort-key": "row-10-5"
         },
         {
-            "name": "Beat the Game - Spencer",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Spencer|"
+            "name": "Kestrel A: Reach sector 7",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Kestrel",
+            "sort-key": "row-10-6"
         },
         {
-            "name": "Beat the Game - Viewtiful Joe",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Viewtiful Joe|"
+            "name": "Kestrel A: Reach sector 8",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Kestrel",
+            "sort-key": "row-10-7"
         },
         {
-            "name": "Beat the Game - Spider-Man",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Spider-Man|",
-            "prehint": true
+            "name": "Kestrel B: Reach sector 1",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Kestrel",
+            "sort-key": "row-11-0"
         },
         {
-            "name": "Beat the Game - Sentinel",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Sentinel|"
+            "name": "Kestrel B: Reach sector 2",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Kestrel",
+            "sort-key": "row-11-1"
         },
         {
-            "name": "Beat the Game - Hulk",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Hulk|"
+            "name": "Kestrel B: Reach sector 3",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Kestrel",
+            "sort-key": "row-11-2"
         },
         {
-            "name": "Beat the Game - Super-Skrull",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Super-Skrull|"
+            "name": "Kestrel B: Reach sector 4",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Kestrel",
+            "sort-key": "row-11-3"
         },
         {
-            "name": "Beat the Game - Hsien-Ko",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Hsien-Ko|"
+            "name": "Kestrel B: Reach sector 5",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Kestrel",
+            "sort-key": "row-11-4"
         },
         {
-            "name": "Beat the Game - Haggar",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Haggar|"
+            "name": "Kestrel B: Reach sector 6",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Kestrel",
+            "sort-key": "row-11-5"
         },
         {
-            "name": "Beat the Game - C. Viper",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|C. Viper|"
+            "name": "Kestrel B: Reach sector 7",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Kestrel",
+            "sort-key": "row-11-6"
         },
         {
-            "name": "Beat the Game - Amaterasu",
-            "category": ["Unlocked Teams", "Left Side"],
-            "requires": "|Amaterasu|"
+            "name": "Kestrel B: Reach sector 8",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Kestrel",
+            "sort-key": "row-11-7"
         },
         {
-            "name": "Beat the Game - Phoenix",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Phoenix|"
+            "name": "Kestrel C: Reach sector 1",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Kestrel",
+            "sort-key": "row-12-0"
         },
         {
-            "name": "Beat the Game - Magneto",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Magneto|"
+            "name": "Kestrel C: Reach sector 2",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Kestrel",
+            "sort-key": "row-12-1"
         },
         {
-            "name": "Beat the Game - She-Hulk",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|She-Hulk|"
+            "name": "Kestrel C: Reach sector 3",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Kestrel",
+            "sort-key": "row-12-2"
         },
         {
-            "name": "Beat the Game - Taskmaster",
-            "category": ["Unlocked Teams", "Right Side"],
-            "requires": "|Taskmaster|"
-        },
-
-        {
-            "name": "We Saved the World!",
-            "victory": true,
-            "category": ["All Characters Complete!"],
-            "requires": "|Marvel event| and |Capcom event|"
+            "name": "Kestrel C: Reach sector 4",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Kestrel",
+            "sort-key": "row-12-3"
         },
         {
-            "name": "Marvel%",
-            "victory": true,
-            "category": ["All Characters Complete!"],
-            "requires": "|Marvel event|"
+            "name": "Kestrel C: Reach sector 5",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Kestrel",
+            "sort-key": "row-12-4"
         },
         {
-            "name": "Capcom%",
-            "victory": true,
-            "category": ["All Characters Complete!"],
-            "requires": "|Capcom event|"
+            "name": "Kestrel C: Reach sector 6",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Kestrel",
+            "sort-key": "row-12-5"
         },
         {
-            "name": "Stars%",
-            "victory": true,
-            "category": ["All Characters Complete!"],
-            "requires": "{ItemValue(star:10)} and {ItemValue(coins:10)}"
+            "name": "Kestrel C: Reach sector 7",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Kestrel",
+            "sort-key": "row-12-6"
+        },
+        {
+            "name": "Kestrel C: Reach sector 8",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Kestrel",
+            "sort-key": "row-12-7"
+        },
+        {
+            "name": "Engi A: Reach sector 1",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Engi",
+            "sort-key": "row-13-0"
+        },
+        {
+            "name": "Engi A: Reach sector 2",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Engi",
+            "sort-key": "row-13-1"
+        },
+        {
+            "name": "Engi A: Reach sector 3",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Engi",
+            "sort-key": "row-13-2"
+        },
+        {
+            "name": "Engi A: Reach sector 4",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Engi",
+            "sort-key": "row-13-3"
+        },
+        {
+            "name": "Engi A: Reach sector 5",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Engi",
+            "sort-key": "row-13-4"
+        },
+        {
+            "name": "Engi A: Reach sector 6",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Engi",
+            "sort-key": "row-13-5"
+        },
+        {
+            "name": "Engi A: Reach sector 7",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Engi",
+            "sort-key": "row-13-6"
+        },
+        {
+            "name": "Engi A: Reach sector 8",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Engi",
+            "sort-key": "row-13-7"
+        },
+        {
+            "name": "Engi B: Reach sector 1",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Engi",
+            "sort-key": "row-14-0"
+        },
+        {
+            "name": "Engi B: Reach sector 2",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Engi",
+            "sort-key": "row-14-1"
+        },
+        {
+            "name": "Engi B: Reach sector 3",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Engi",
+            "sort-key": "row-14-2"
+        },
+        {
+            "name": "Engi B: Reach sector 4",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Engi",
+            "sort-key": "row-14-3"
+        },
+        {
+            "name": "Engi B: Reach sector 5",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Engi",
+            "sort-key": "row-14-4"
+        },
+        {
+            "name": "Engi B: Reach sector 6",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Engi",
+            "sort-key": "row-14-5"
+        },
+        {
+            "name": "Engi B: Reach sector 7",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Engi",
+            "sort-key": "row-14-6"
+        },
+        {
+            "name": "Engi B: Reach sector 8",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Engi",
+            "sort-key": "row-14-7"
+        },
+        {
+            "name": "Engi C: Reach sector 1",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Engi",
+            "sort-key": "row-15-0"
+        },
+        {
+            "name": "Engi C: Reach sector 2",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Engi",
+            "sort-key": "row-15-1"
+        },
+        {
+            "name": "Engi C: Reach sector 3",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Engi",
+            "sort-key": "row-15-2"
+        },
+        {
+            "name": "Engi C: Reach sector 4",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Engi",
+            "sort-key": "row-15-3"
+        },
+        {
+            "name": "Engi C: Reach sector 5",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Engi",
+            "sort-key": "row-15-4"
+        },
+        {
+            "name": "Engi C: Reach sector 6",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Engi",
+            "sort-key": "row-15-5"
+        },
+        {
+            "name": "Engi C: Reach sector 7",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Engi",
+            "sort-key": "row-15-6"
+        },
+        {
+            "name": "Engi C: Reach sector 8",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Engi",
+            "sort-key": "row-15-7"
+        },
+        {
+            "name": "Federation A: Reach sector 1",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Federation",
+            "sort-key": "row-16-0"
+        },
+        {
+            "name": "Federation A: Reach sector 2",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Federation",
+            "sort-key": "row-16-1"
+        },
+        {
+            "name": "Federation A: Reach sector 3",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Federation",
+            "sort-key": "row-16-2"
+        },
+        {
+            "name": "Federation A: Reach sector 4",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Federation",
+            "sort-key": "row-16-3"
+        },
+        {
+            "name": "Federation A: Reach sector 5",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Federation",
+            "sort-key": "row-16-4"
+        },
+        {
+            "name": "Federation A: Reach sector 6",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Federation",
+            "sort-key": "row-16-5"
+        },
+        {
+            "name": "Federation A: Reach sector 7",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Federation",
+            "sort-key": "row-16-6"
+        },
+        {
+            "name": "Federation A: Reach sector 8",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Federation",
+            "sort-key": "row-16-7"
+        },
+        {
+            "name": "Federation B: Reach sector 1",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Federation",
+            "sort-key": "row-17-0"
+        },
+        {
+            "name": "Federation B: Reach sector 2",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Federation",
+            "sort-key": "row-17-1"
+        },
+        {
+            "name": "Federation B: Reach sector 3",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Federation",
+            "sort-key": "row-17-2"
+        },
+        {
+            "name": "Federation B: Reach sector 4",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Federation",
+            "sort-key": "row-17-3"
+        },
+        {
+            "name": "Federation B: Reach sector 5",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Federation",
+            "sort-key": "row-17-4"
+        },
+        {
+            "name": "Federation B: Reach sector 6",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Federation",
+            "sort-key": "row-17-5"
+        },
+        {
+            "name": "Federation B: Reach sector 7",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Federation",
+            "sort-key": "row-17-6"
+        },
+        {
+            "name": "Federation B: Reach sector 8",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Federation",
+            "sort-key": "row-17-7"
+        },
+        {
+            "name": "Federation C: Reach sector 1",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Federation",
+            "sort-key": "row-18-0"
+        },
+        {
+            "name": "Federation C: Reach sector 2",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Federation",
+            "sort-key": "row-18-1"
+        },
+        {
+            "name": "Federation C: Reach sector 3",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Federation",
+            "sort-key": "row-18-2"
+        },
+        {
+            "name": "Federation C: Reach sector 4",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Federation",
+            "sort-key": "row-18-3"
+        },
+        {
+            "name": "Federation C: Reach sector 5",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Federation",
+            "sort-key": "row-18-4"
+        },
+        {
+            "name": "Federation C: Reach sector 6",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Federation",
+            "sort-key": "row-18-5"
+        },
+        {
+            "name": "Federation C: Reach sector 7",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Federation",
+            "sort-key": "row-18-6"
+        },
+        {
+            "name": "Federation C: Reach sector 8",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Federation",
+            "sort-key": "row-18-7"
+        },
+        {
+            "name": "Zoltan A: Reach sector 1",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Zoltan",
+            "sort-key": "row-19-0"
+        },
+        {
+            "name": "Zoltan A: Reach sector 2",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Zoltan",
+            "sort-key": "row-19-1"
+        },
+        {
+            "name": "Zoltan A: Reach sector 3",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Zoltan",
+            "sort-key": "row-19-2"
+        },
+        {
+            "name": "Zoltan A: Reach sector 4",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Zoltan",
+            "sort-key": "row-19-3"
+        },
+        {
+            "name": "Zoltan A: Reach sector 5",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Zoltan",
+            "sort-key": "row-19-4"
+        },
+        {
+            "name": "Zoltan A: Reach sector 6",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Zoltan",
+            "sort-key": "row-19-5"
+        },
+        {
+            "name": "Zoltan A: Reach sector 7",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Zoltan",
+            "sort-key": "row-19-6"
+        },
+        {
+            "name": "Zoltan A: Reach sector 8",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Zoltan",
+            "sort-key": "row-19-7"
+        },
+        {
+            "name": "Zoltan B: Reach sector 1",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Zoltan",
+            "sort-key": "row-20-0"
+        },
+        {
+            "name": "Zoltan B: Reach sector 2",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Zoltan",
+            "sort-key": "row-20-1"
+        },
+        {
+            "name": "Zoltan B: Reach sector 3",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Zoltan",
+            "sort-key": "row-20-2"
+        },
+        {
+            "name": "Zoltan B: Reach sector 4",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Zoltan",
+            "sort-key": "row-20-3"
+        },
+        {
+            "name": "Zoltan B: Reach sector 5",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Zoltan",
+            "sort-key": "row-20-4"
+        },
+        {
+            "name": "Zoltan B: Reach sector 6",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Zoltan",
+            "sort-key": "row-20-5"
+        },
+        {
+            "name": "Zoltan B: Reach sector 7",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Zoltan",
+            "sort-key": "row-20-6"
+        },
+        {
+            "name": "Zoltan B: Reach sector 8",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Zoltan",
+            "sort-key": "row-20-7"
+        },
+        {
+            "name": "Zoltan C: Reach sector 1",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Zoltan",
+            "sort-key": "row-21-0"
+        },
+        {
+            "name": "Zoltan C: Reach sector 2",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Zoltan",
+            "sort-key": "row-21-1"
+        },
+        {
+            "name": "Zoltan C: Reach sector 3",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Zoltan",
+            "sort-key": "row-21-2"
+        },
+        {
+            "name": "Zoltan C: Reach sector 4",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Zoltan",
+            "sort-key": "row-21-3"
+        },
+        {
+            "name": "Zoltan C: Reach sector 5",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Zoltan",
+            "sort-key": "row-21-4"
+        },
+        {
+            "name": "Zoltan C: Reach sector 6",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Zoltan",
+            "sort-key": "row-21-5"
+        },
+        {
+            "name": "Zoltan C: Reach sector 7",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Zoltan",
+            "sort-key": "row-21-6"
+        },
+        {
+            "name": "Zoltan C: Reach sector 8",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Zoltan",
+            "sort-key": "row-21-7"
+        },
+        {
+            "name": "Lanius A: Reach sector 1",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Lanius",
+            "sort-key": "row-22-0"
+        },
+        {
+            "name": "Lanius A: Reach sector 2",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Lanius",
+            "sort-key": "row-22-1"
+        },
+        {
+            "name": "Lanius A: Reach sector 3",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Lanius",
+            "sort-key": "row-22-2"
+        },
+        {
+            "name": "Lanius A: Reach sector 4",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Lanius",
+            "sort-key": "row-22-3"
+        },
+        {
+            "name": "Lanius A: Reach sector 5",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Lanius",
+            "sort-key": "row-22-4"
+        },
+        {
+            "name": "Lanius A: Reach sector 6",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Lanius",
+            "sort-key": "row-22-5"
+        },
+        {
+            "name": "Lanius A: Reach sector 7",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Lanius",
+            "sort-key": "row-22-6"
+        },
+        {
+            "name": "Lanius A: Reach sector 8",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Lanius",
+            "sort-key": "row-22-7"
+        },
+        {
+            "name": "Lanius B: Reach sector 1",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Lanius",
+            "sort-key": "row-23-0"
+        },
+        {
+            "name": "Lanius B: Reach sector 2",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Lanius",
+            "sort-key": "row-23-1"
+        },
+        {
+            "name": "Lanius B: Reach sector 3",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Lanius",
+            "sort-key": "row-23-2"
+        },
+        {
+            "name": "Lanius B: Reach sector 4",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Lanius",
+            "sort-key": "row-23-3"
+        },
+        {
+            "name": "Lanius B: Reach sector 5",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Lanius",
+            "sort-key": "row-23-4"
+        },
+        {
+            "name": "Lanius B: Reach sector 6",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Lanius",
+            "sort-key": "row-23-5"
+        },
+        {
+            "name": "Lanius B: Reach sector 7",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Lanius",
+            "sort-key": "row-23-6"
+        },
+        {
+            "name": "Lanius B: Reach sector 8",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Lanius",
+            "sort-key": "row-23-7"
+        },
+        {
+            "name": "Stealth A: Reach sector 1",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Stealth",
+            "sort-key": "row-24-0"
+        },
+        {
+            "name": "Stealth A: Reach sector 2",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Stealth",
+            "sort-key": "row-24-1"
+        },
+        {
+            "name": "Stealth A: Reach sector 3",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Stealth",
+            "sort-key": "row-24-2"
+        },
+        {
+            "name": "Stealth A: Reach sector 4",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Stealth",
+            "sort-key": "row-24-3"
+        },
+        {
+            "name": "Stealth A: Reach sector 5",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Stealth",
+            "sort-key": "row-24-4"
+        },
+        {
+            "name": "Stealth A: Reach sector 6",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Stealth",
+            "sort-key": "row-24-5"
+        },
+        {
+            "name": "Stealth A: Reach sector 7",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Stealth",
+            "sort-key": "row-24-6"
+        },
+        {
+            "name": "Stealth A: Reach sector 8",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Stealth",
+            "sort-key": "row-24-7"
+        },
+        {
+            "name": "Stealth B: Reach sector 1",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Stealth",
+            "sort-key": "row-25-0"
+        },
+        {
+            "name": "Stealth B: Reach sector 2",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Stealth",
+            "sort-key": "row-25-1"
+        },
+        {
+            "name": "Stealth B: Reach sector 3",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Stealth",
+            "sort-key": "row-25-2"
+        },
+        {
+            "name": "Stealth B: Reach sector 4",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Stealth",
+            "sort-key": "row-25-3"
+        },
+        {
+            "name": "Stealth B: Reach sector 5",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Stealth",
+            "sort-key": "row-25-4"
+        },
+        {
+            "name": "Stealth B: Reach sector 6",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Stealth",
+            "sort-key": "row-25-5"
+        },
+        {
+            "name": "Stealth B: Reach sector 7",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Stealth",
+            "sort-key": "row-25-6"
+        },
+        {
+            "name": "Stealth B: Reach sector 8",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Stealth",
+            "sort-key": "row-25-7"
+        },
+        {
+            "name": "Stealth C: Reach sector 1",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Stealth",
+            "sort-key": "row-26-0"
+        },
+        {
+            "name": "Stealth C: Reach sector 2",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Stealth",
+            "sort-key": "row-26-1"
+        },
+        {
+            "name": "Stealth C: Reach sector 3",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Stealth",
+            "sort-key": "row-26-2"
+        },
+        {
+            "name": "Stealth C: Reach sector 4",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Stealth",
+            "sort-key": "row-26-3"
+        },
+        {
+            "name": "Stealth C: Reach sector 5",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Stealth",
+            "sort-key": "row-26-4"
+        },
+        {
+            "name": "Stealth C: Reach sector 6",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Stealth",
+            "sort-key": "row-26-5"
+        },
+        {
+            "name": "Stealth C: Reach sector 7",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Stealth",
+            "sort-key": "row-26-6"
+        },
+        {
+            "name": "Stealth C: Reach sector 8",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Stealth",
+            "sort-key": "row-26-7"
+        },
+        {
+            "name": "Rock A: Reach sector 1",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Rock",
+            "sort-key": "row-27-0"
+        },
+        {
+            "name": "Rock A: Reach sector 2",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Rock",
+            "sort-key": "row-27-1"
+        },
+        {
+            "name": "Rock A: Reach sector 3",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Rock",
+            "sort-key": "row-27-2"
+        },
+        {
+            "name": "Rock A: Reach sector 4",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Rock",
+            "sort-key": "row-27-3"
+        },
+        {
+            "name": "Rock A: Reach sector 5",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Rock",
+            "sort-key": "row-27-4"
+        },
+        {
+            "name": "Rock A: Reach sector 6",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Rock",
+            "sort-key": "row-27-5"
+        },
+        {
+            "name": "Rock A: Reach sector 7",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Rock",
+            "sort-key": "row-27-6"
+        },
+        {
+            "name": "Rock A: Reach sector 8",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Rock",
+            "sort-key": "row-27-7"
+        },
+        {
+            "name": "Rock B: Reach sector 1",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Rock",
+            "sort-key": "row-28-0"
+        },
+        {
+            "name": "Rock B: Reach sector 2",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Rock",
+            "sort-key": "row-28-1"
+        },
+        {
+            "name": "Rock B: Reach sector 3",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Rock",
+            "sort-key": "row-28-2"
+        },
+        {
+            "name": "Rock B: Reach sector 4",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Rock",
+            "sort-key": "row-28-3"
+        },
+        {
+            "name": "Rock B: Reach sector 5",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Rock",
+            "sort-key": "row-28-4"
+        },
+        {
+            "name": "Rock B: Reach sector 6",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Rock",
+            "sort-key": "row-28-5"
+        },
+        {
+            "name": "Rock B: Reach sector 7",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Rock",
+            "sort-key": "row-28-6"
+        },
+        {
+            "name": "Rock B: Reach sector 8",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Rock",
+            "sort-key": "row-28-7"
+        },
+        {
+            "name": "Rock C: Reach sector 1",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Rock",
+            "sort-key": "row-29-0"
+        },
+        {
+            "name": "Rock C: Reach sector 2",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Rock",
+            "sort-key": "row-29-1"
+        },
+        {
+            "name": "Rock C: Reach sector 3",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Rock",
+            "sort-key": "row-29-2"
+        },
+        {
+            "name": "Rock C: Reach sector 4",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Rock",
+            "sort-key": "row-29-3"
+        },
+        {
+            "name": "Rock C: Reach sector 5",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Rock",
+            "sort-key": "row-29-4"
+        },
+        {
+            "name": "Rock C: Reach sector 6",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Rock",
+            "sort-key": "row-29-5"
+        },
+        {
+            "name": "Rock C: Reach sector 7",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Rock",
+            "sort-key": "row-29-6"
+        },
+        {
+            "name": "Rock C: Reach sector 8",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Rock",
+            "sort-key": "row-29-7"
+        },
+        {
+            "name": "Slug A: Reach sector 1",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Slug",
+            "sort-key": "row-30-0"
+        },
+        {
+            "name": "Slug A: Reach sector 2",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Slug",
+            "sort-key": "row-30-1"
+        },
+        {
+            "name": "Slug A: Reach sector 3",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Slug",
+            "sort-key": "row-30-2"
+        },
+        {
+            "name": "Slug A: Reach sector 4",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Slug",
+            "sort-key": "row-30-3"
+        },
+        {
+            "name": "Slug A: Reach sector 5",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Slug",
+            "sort-key": "row-30-4"
+        },
+        {
+            "name": "Slug A: Reach sector 6",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Slug",
+            "sort-key": "row-30-5"
+        },
+        {
+            "name": "Slug A: Reach sector 7",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Slug",
+            "sort-key": "row-30-6"
+        },
+        {
+            "name": "Slug A: Reach sector 8",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Slug",
+            "sort-key": "row-30-7"
+        },
+        {
+            "name": "Slug B: Reach sector 1",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Slug",
+            "sort-key": "row-31-0"
+        },
+        {
+            "name": "Slug B: Reach sector 2",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Slug",
+            "sort-key": "row-31-1"
+        },
+        {
+            "name": "Slug B: Reach sector 3",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Slug",
+            "sort-key": "row-31-2"
+        },
+        {
+            "name": "Slug B: Reach sector 4",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Slug",
+            "sort-key": "row-31-3"
+        },
+        {
+            "name": "Slug B: Reach sector 5",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Slug",
+            "sort-key": "row-31-4"
+        },
+        {
+            "name": "Slug B: Reach sector 6",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Slug",
+            "sort-key": "row-31-5"
+        },
+        {
+            "name": "Slug B: Reach sector 7",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Slug",
+            "sort-key": "row-31-6"
+        },
+        {
+            "name": "Slug B: Reach sector 8",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Slug",
+            "sort-key": "row-31-7"
+        },
+        {
+            "name": "Slug C: Reach sector 1",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Slug",
+            "sort-key": "row-32-0"
+        },
+        {
+            "name": "Slug C: Reach sector 2",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Slug",
+            "sort-key": "row-32-1"
+        },
+        {
+            "name": "Slug C: Reach sector 3",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Slug",
+            "sort-key": "row-32-2"
+        },
+        {
+            "name": "Slug C: Reach sector 4",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Slug",
+            "sort-key": "row-32-3"
+        },
+        {
+            "name": "Slug C: Reach sector 5",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Slug",
+            "sort-key": "row-32-4"
+        },
+        {
+            "name": "Slug C: Reach sector 6",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Slug",
+            "sort-key": "row-32-5"
+        },
+        {
+            "name": "Slug C: Reach sector 7",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Slug",
+            "sort-key": "row-32-6"
+        },
+        {
+            "name": "Slug C: Reach sector 8",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Slug",
+            "sort-key": "row-32-7"
+        },
+        {
+            "name": "Mantis A: Reach sector 1",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Mantis",
+            "sort-key": "row-33-0"
+        },
+        {
+            "name": "Mantis A: Reach sector 2",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Mantis",
+            "sort-key": "row-33-1"
+        },
+        {
+            "name": "Mantis A: Reach sector 3",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Mantis",
+            "sort-key": "row-33-2"
+        },
+        {
+            "name": "Mantis A: Reach sector 4",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Mantis",
+            "sort-key": "row-33-3"
+        },
+        {
+            "name": "Mantis A: Reach sector 5",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Mantis",
+            "sort-key": "row-33-4"
+        },
+        {
+            "name": "Mantis A: Reach sector 6",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Mantis",
+            "sort-key": "row-33-5"
+        },
+        {
+            "name": "Mantis A: Reach sector 7",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Mantis",
+            "sort-key": "row-33-6"
+        },
+        {
+            "name": "Mantis A: Reach sector 8",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Mantis",
+            "sort-key": "row-33-7"
+        },
+        {
+            "name": "Mantis B: Reach sector 1",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Mantis",
+            "sort-key": "row-34-0"
+        },
+        {
+            "name": "Mantis B: Reach sector 2",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Mantis",
+            "sort-key": "row-34-1"
+        },
+        {
+            "name": "Mantis B: Reach sector 3",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Mantis",
+            "sort-key": "row-34-2"
+        },
+        {
+            "name": "Mantis B: Reach sector 4",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Mantis",
+            "sort-key": "row-34-3"
+        },
+        {
+            "name": "Mantis B: Reach sector 5",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Mantis",
+            "sort-key": "row-34-4"
+        },
+        {
+            "name": "Mantis B: Reach sector 6",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Mantis",
+            "sort-key": "row-34-5"
+        },
+        {
+            "name": "Mantis B: Reach sector 7",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Mantis",
+            "sort-key": "row-34-6"
+        },
+        {
+            "name": "Mantis B: Reach sector 8",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Mantis",
+            "sort-key": "row-34-7"
+        },
+        {
+            "name": "Mantis C: Reach sector 1",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Mantis",
+            "sort-key": "row-35-0"
+        },
+        {
+            "name": "Mantis C: Reach sector 2",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Mantis",
+            "sort-key": "row-35-1"
+        },
+        {
+            "name": "Mantis C: Reach sector 3",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Mantis",
+            "sort-key": "row-35-2"
+        },
+        {
+            "name": "Mantis C: Reach sector 4",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Mantis",
+            "sort-key": "row-35-3"
+        },
+        {
+            "name": "Mantis C: Reach sector 5",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Mantis",
+            "sort-key": "row-35-4"
+        },
+        {
+            "name": "Mantis C: Reach sector 6",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Mantis",
+            "sort-key": "row-35-5"
+        },
+        {
+            "name": "Mantis C: Reach sector 7",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Mantis",
+            "sort-key": "row-35-6"
+        },
+        {
+            "name": "Mantis C: Reach sector 8",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Mantis",
+            "sort-key": "row-35-7"
+        },
+        {
+            "name": "Crystal A: Reach sector 1",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Crystal",
+            "sort-key": "row-36-0"
+        },
+        {
+            "name": "Crystal A: Reach sector 2",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Crystal",
+            "sort-key": "row-36-1"
+        },
+        {
+            "name": "Crystal A: Reach sector 3",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Crystal",
+            "sort-key": "row-36-2"
+        },
+        {
+            "name": "Crystal A: Reach sector 4",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Crystal",
+            "sort-key": "row-36-3"
+        },
+        {
+            "name": "Crystal A: Reach sector 5",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Crystal",
+            "sort-key": "row-36-4"
+        },
+        {
+            "name": "Crystal A: Reach sector 6",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Crystal",
+            "sort-key": "row-36-5"
+        },
+        {
+            "name": "Crystal A: Reach sector 7",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Crystal",
+            "sort-key": "row-36-6"
+        },
+        {
+            "name": "Crystal A: Reach sector 8",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Crystal",
+            "sort-key": "row-36-7"
+        },
+        {
+            "name": "Crystal B: Reach sector 1",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Crystal",
+            "sort-key": "row-37-0"
+        },
+        {
+            "name": "Crystal B: Reach sector 2",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Crystal",
+            "sort-key": "row-37-1"
+        },
+        {
+            "name": "Crystal B: Reach sector 3",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Crystal",
+            "sort-key": "row-37-2"
+        },
+        {
+            "name": "Crystal B: Reach sector 4",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Crystal",
+            "sort-key": "row-37-3"
+        },
+        {
+            "name": "Crystal B: Reach sector 5",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Crystal",
+            "sort-key": "row-37-4"
+        },
+        {
+            "name": "Crystal B: Reach sector 6",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Crystal",
+            "sort-key": "row-37-5"
+        },
+        {
+            "name": "Crystal B: Reach sector 7",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Crystal",
+            "sort-key": "row-37-6"
+        },
+        {
+            "name": "Crystal B: Reach sector 8",
+            "category": [
+                "Sectors"
+            ],
+            "region": "Crystal",
+            "sort-key": "row-37-7"
+        },
+        {
+            "name": "Just Getting Started",
+            "category": [
+                "Achievements"
+            ],
+            "sort-key": "row-38-0"
+        },
+        {
+            "name": "Federation Base In Range",
+            "category": [
+                "Achievements"
+            ],
+            "sort-key": "row-38-1"
+        },
+        {
+            "name": "Federation Victory (Easy)",
+            "category": [
+                "Achievements"
+            ],
+            "sort-key": "row-38-2"
+        },
+        {
+            "name": "Federation Victory (Normal)",
+            "category": [
+                "Achievements"
+            ],
+            "sort-key": "row-38-3"
+        },
+        {
+            "name": "Your Own Fleet",
+            "category": [
+                "Achievements"
+            ],
+            "sort-key": "row-38-4"
+        },
+        {
+            "name": "RuleTen: Greed Is Eternal",
+            "category": [
+                "Achievements"
+            ],
+            "sort-key": "row-38-5"
+        },
+        {
+            "name": "Warlord",
+            "category": [
+                "Achievements"
+            ],
+            "sort-key": "row-38-6"
+        },
+        {
+            "name": "Coming In for my Pacifism run!",
+            "category": [
+                "Achievements"
+            ],
+            "sort-key": "row-39-0"
+        },
+        {
+            "name": "I don't need no stinkin' upgrades!",
+            "category": [
+                "Achievements"
+            ],
+            "sort-key": "row-39-1"
+        },
+        {
+            "name": "On a Wing and a Prayer",
+            "category": [
+                "Achievements"
+            ],
+            "sort-key": "row-39-2"
+        },
+        {
+            "name": "Ballistophobia",
+            "category": [
+                "Achievements"
+            ],
+            "sort-key": "row-39-3"
+        },
+        {
+            "name": "Technophobia",
+            "category": [
+                "Achievements"
+            ],
+            "sort-key": "row-39-4"
+        },
+        {
+            "name": "Living off the Land",
+            "category": [
+                "Achievements"
+            ],
+            "sort-key": "row-39-5"
+        },
+        {
+            "name": "No Redshirts Here",
+            "category": [
+                "Achievements"
+            ],
+            "sort-key": "row-39-6"
+        },
+        {
+            "name": "Some people just like to watch ships burn",
+            "category": [
+                "Achievements"
+            ],
+            "sort-key": "row-40-0"
+        },
+        {
+            "name": "Astronomically Low Odds",
+            "category": [
+                "Achievements"
+            ],
+            "sort-key": "row-40-1"
+        },
+        {
+            "name": "BOARDING OBJECTIVE SUCCESSFUL",
+            "category": [
+                "Achievements"
+            ],
+            "sort-key": "row-40-2"
+        },
+        {
+            "name": "They never saw it coming",
+            "category": [
+                "Achievements"
+            ],
+            "sort-key": "row-40-3"
+        },
+        {
+            "name": "Trustworthy Auto-Pilot",
+            "category": [
+                "Achievements"
+            ],
+            "sort-key": "row-40-4"
+        },
+        {
+            "name": "Slice and Dice",
+            "category": [
+                "Achievements"
+            ],
+            "sort-key": "row-40-5"
+        },
+        {
+            "name": "Victory through Asphyxiation",
+            "category": [
+                "Achievements"
+            ],
+            "sort-key": "row-40-6"
         }
     ]
 }
-
