@@ -101,7 +101,7 @@ class ShipAndEquipmentFeats(Choice):
     option_normal = 2
     default = 1
 
-class ShieldsBlueprintProgression(Choice):
+class ShieldsBlueprintLogic(Choice):
     """Shields blueprint logic.
      required: The Shields blueprint is required to play a ship with Shields and upgrade the Shields system. While unobtained, you can only play with Stealth.
      upgrade_only: The Shields blueprint is not required to play a ship with Shields, but is required to upgrade the Shields system.
@@ -112,7 +112,7 @@ class ShieldsBlueprintProgression(Choice):
     option_start_with = 2
     default = 1
 
-class SensorsBlueprintProgression(Choice):
+class SensorsBlueprintLogic(Choice):
     """Sensors blueprint logic.
      required: The Sensors blueprint is required to play a ship with Sensors and upgrade the Sensors system. While unobtained, you can only play with Slug or Mantis.
      upgrade_only: The Sensors blueprint is not required to play a ship with Sensors, but is required to upgrade the Sensors system.
@@ -123,7 +123,7 @@ class SensorsBlueprintProgression(Choice):
     option_start_with = 2
     default = 1
 
-class MedbayBlueprintProgression(Choice):
+class MedbayBlueprintLogic(Choice):
     """Medbay blueprint logic.
      required: The Medbay blueprint is required to play a ship with Medbay and upgrade the Medbay system. While unobtained, you can only play with Lanius.
      upgrade_only: The Medbay blueprint is not required to play a ship with Medbay, but is required to upgrade the Medbay system.
@@ -167,8 +167,8 @@ def before_options_defined(options: dict[str, Type[Option[Any]]]) -> dict[str, T
     options["general_achievements"] = GeneralAchievements
     options["going_the_distance"] = GoingTheDistance
     options["ship_and_equipment_feats"] = ShipAndEquipmentFeats
-    options["shields_blueprint_progression"] = ShieldsBlueprintProgression
-    options["sensors_blueprint_progression"] = SensorsBlueprintProgression
+    options["shields_blueprint_logic"] = ShieldsBlueprintLogic
+    options["sensors_blueprint_logic"] = SensorsBlueprintLogic
     options["medbay_blueprint_logic"] = MedbayBlueprintLogic
     options["engines_blueprint_logic"] = EnginesBlueprintLogic
     options["weapons_blueprint_logic"] = WeaponsBlueprintLogic

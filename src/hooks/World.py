@@ -49,12 +49,6 @@ def before_create_regions(world: World, multiworld: MultiWorld, player: int):
 
 # Called after regions and locations are created, in case you want to see or modify that information. Victory location is included.
 def after_create_regions(world: World, multiworld: MultiWorld, player: int):
-    for region in multiworld.regions:
-        if region.player == player:
-            if world.options.medbay_blueprint_logic.value == 0:
-                if region.name == "Crystal":
-                    # TODO
-
     # Use this hook to remove locations from the world
     locationNamesToRemove: list[str] = [] # List of location names
 
@@ -141,6 +135,22 @@ def after_set_rules(world: World, multiworld: MultiWorld, player: int):
     # location.access_rule = lambda state: old_rule(state) and Example_Rule(state)
     # OR
     # location.access_rule = lambda state: old_rule(state) or Example_Rule(state)
+    
+    for region in multiworld.regions:
+        if region.player == player:
+            for location in list(region.locations):
+                old_rule = location.access_rule
+                if world.options.medbay_blueprint_logic.value == 0:
+                    if region.name in ["Crystal", "Crystal B", "Zoltan", "Zoltan B", "Mantis", "Mantis B", "Slug", "Kestrel", "Kestrel B", "Federation", "Federation B", "Engi", "Engi B","Stealth", "Stealth B", "Rock", "Rock B"]:
+                        location.access_rule = lambda state: old_rule(state) and state.has("Medbay blueprint", player)
+
+                if world.options.sensors_blueprint_logic.value == 0:
+                    if region.name not in ["Slug", "Slug B", "Slug C", "Engi B", "Stealth C", "Mantis", "Lanius B"]:
+                        location.access_rule = lambda state: old_rule(state) and state.has("Sensors blueprint", player)
+
+                if world.options.shields_blueprint_logic.value == 0:
+                    if region.name not in ["Stealth", "Stealth B", "Stealth C"]:
+                        location.access_rule = lambda state: old_rule(state) and state.has("Shields blueprint", player)
 
 # The item name to create is provided before the item is created, in case you want to make changes to it
 def before_create_item(item_name: str, world: World, multiworld: MultiWorld, player: int) -> str:
