@@ -75,10 +75,10 @@ def before_create_items_all(item_config: dict[str, int|dict], world: World, mult
             starting_ship = random.choice(list(region_table.keys()))
 
     starting_ship_key = f"{starting_ship} Key"
-        multiworld.push_precollected(multiworld.create_item(starting_ship_key, player))
-        # Remove it from the pool
-        item_config[starting_ship_key] = 0
-        return item_config
+    multiworld.push_precollected(multiworld.create_item(starting_ship_key, player))
+    # Remove it from the pool
+    item_config[starting_ship_key] = 0
+    return item_config
 
 # The item pool before starting items are processed, in case you want to see the raw item pool at that stage
 def before_create_items_starting(item_pool: list, world: World, multiworld: MultiWorld, player: int) -> list:
