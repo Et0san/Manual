@@ -161,8 +161,6 @@ def after_set_rules(world: World, multiworld: MultiWorld, player: int):
     # location.access_rule = lambda state: old_rule(state) and Example_Rule(state)
     # OR
     # location.access_rule = lambda state: old_rule(state) or Example_Rule(state)
-    
-    # TODO fix completion condition
 
     if get_option_value(multiworld, player, "goal") == 0:
         multiworld.completion_condition[player] = lambda state: state.count("Victory Token", player) >= get_option_value(multiworld, player, "ship_win_count")
@@ -223,17 +221,19 @@ def before_generate_basic(world: World, multiworld: MultiWorld, player: int):
                 if get_category_of_location(location, world) == "Ship victories":
                     victory_available.append(location)
 
-    if get_option_value(multiworld, player, "goal") == 0:
+    if get_option_value(multiworld, player, "goal") == 1:
         victories = get_option_value(multiworld, player, "ship_win_selection")
         for location in victory_available:
-            if location.name in victories:
+            if location.name in map(lambda v: v + " victory", victories):
                 location.place_locked_item(multiworld.create_item("Victory Token", player))
-    else:
+    elif get_option_value(multiworld, player, "goal") == 0:
         victory_count = get_option_value(multiworld, player, "ship_win_count")
         import random
         selected_victories = random.sample(victory_available, min(victory_count, len(victory_available)))
         for location in selected_victories:
             location.place_locked_item(multiworld.create_item("Victory Token", player))
+    else:
+        raise Exception("Invalid goal option")
 
     # Generate events for region logic
     for region in multiworld.regions:
@@ -243,6 +243,16 @@ def before_generate_basic(world: World, multiworld: MultiWorld, player: int):
                     item = multiworld.create_item(location.name, player)
                     location.place_locked_item(item)
                     multiworld.itempool.remove(item)
+
+    # Remove victory tokens from the item pool, since they have been placed at victory locations; and replace them with filler items to keep the item count consistent
+    # victory_tokens = 0
+    # for item in multiworld.itempool:
+    #     if item.name == "Victory Token" and item.player == player:
+    #         multiworld.itempool.remove(item)
+    #         victory_tokens += 1
+
+    # for _ in range(victory_tokens):
+    #     multiworld.itempool.append(multiworld.create_item(world.filler_item_name, player))
 
 # This method is run at the very end of pre-generation, once the place_item options have been handled and before AP generation occurs
 def after_generate_basic(world: World, multiworld: MultiWorld, player: int):

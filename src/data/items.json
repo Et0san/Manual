@@ -2,6 +2,14 @@
     "$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.items.schema.json",
     "data": [
         {
+            "name": "Victory Token",
+            "category": [
+                "Ship victories"
+            ],
+            "progression": true,
+            "count": 0
+        },
+        {
             "name": "Kestrel Key",
             "category": [
                 "Ship keys"
