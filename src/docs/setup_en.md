@@ -2,7 +2,7 @@
 
 ## Required Software
 
-- FTL: Faster Than Light
+- FTL: Faster Than Light (Advanced Edition)
 
 ## Installation Procedures
 
