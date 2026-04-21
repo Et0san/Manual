@@ -8,7 +8,7 @@
 
 - Copy `~/Documents/My Games/FasterThanLight/ae_prof.sav` somewhere else if you wish to keep your game progression.
 - Disable Steam Cloud if you wish to keep your cloud save intact.
-- Download [this save file](<TODO mettre lien vers le fichier dans ce repo>) and put it in `~/Documents/My Games/FasterThanLight/`.
+- Download [this save file](https://github.com/Et0san/Manual/raw/refs/heads/eto/manual_FTL/ae_prof.sav) and put it in `~/Documents/My Games/FasterThanLight/`.
 
 ## Joining a MultiWorld Game
 
