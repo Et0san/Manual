@@ -4,133 +4,133 @@
         {
             "name": "Kestrel Key",
             "category": [
-                "Ship key"
+                "Ship keys"
             ],
             "progression": true
         },
         {
             "name": "Engi Key",
             "category": [
-                "Ship key"
+                "Ship keys"
             ],
             "progression": true
         },
         {
             "name": "Lanius Key",
             "category": [
-                "Ship key"
+                "Ship keys"
             ],
             "progression": true
         },
         {
             "name": "Federation Key",
             "category": [
-                "Ship key"
+                "Ship keys"
             ],
             "progression": true
         },
         {
             "name": "Rock Key",
             "category": [
-                "Ship key"
+                "Ship keys"
             ],
             "progression": true
         },
         {
             "name": "Slug Key",
             "category": [
-                "Ship key"
+                "Ship keys"
             ],
             "progression": true
         },
         {
             "name": "Mantis Key",
             "category": [
-                "Ship key"
+                "Ship keys"
             ],
             "progression": true
         },
         {
             "name": "Stealth Key",
             "category": [
-                "Ship key"
+                "Ship keys"
             ],
             "progression": true
         },
         {
             "name": "Zoltan Key",
             "category": [
-                "Ship key"
+                "Ship keys"
             ],
             "progression": true
         },
         {
             "name": "Crystal Key",
             "category": [
-                "Ship key"
+                "Ship keys"
             ],
             "progression": true
         },
         {
             "name": "Artillery Beam blueprint",
             "category": [
-                "System blueprint"
+                "System blueprints"
             ],
             "progression": true
         },
         {
             "name": "Cloaking blueprint",
             "category": [
-                "System blueprint"
+                "System blueprints"
             ],
             "progression": true
         },
         {
             "name": "Clone Bay blueprint",
             "category": [
-                "System blueprint"
+                "System blueprints"
             ],
             "progression": true
         },
         {
             "name": "Crew Teleporter blueprint",
             "category": [
-                "System blueprint"
+                "System blueprints"
             ],
             "progression": true
         },
         {
             "name": "Drone Control blueprint",
             "category": [
-                "System blueprint"
+                "System blueprints"
             ],
             "progression": true
         },
         {
             "name": "Flak Artillery blueprint",
             "category": [
-                "System blueprint"
+                "System blueprints"
             ],
             "progression": true
         },
         {
             "name": "Hacking blueprint",
             "category": [
-                "System blueprint"
+                "System blueprints"
             ],
             "progression": true
         },
         {
             "name": "Medbay blueprint",
             "category": [
-                "System blueprint"
+                "System blueprints"
             ],
             "progression": true
         },
         {
             "name": "Mind Control blueprint",
             "category": [
-                "System blueprint"
+                "System blueprints"
             ],
             "progression": false,
             "useful": true
@@ -138,7 +138,7 @@
         {
             "name": "Oxygen blueprint",
             "category": [
-                "System blueprint"
+                "System blueprints"
             ],
             "progression": false,
             "useful": true
@@ -146,7 +146,7 @@
         {
             "name": "Engines blueprint",
             "category": [
-                "System blueprint"
+                "System blueprints"
             ],
             "progression": false,
             "useful": true
@@ -154,7 +154,7 @@
         {
             "name": "Piloting blueprint",
             "category": [
-                "System blueprint"
+                "System blueprints"
             ],
             "progression": false,
             "useful": true
@@ -162,14 +162,14 @@
         {
             "name": "Sensors blueprint",
             "category": [
-                "System blueprint"
+                "System blueprints"
             ],
             "progression": true
         },
         {
             "name": "Doors blueprint",
             "category": [
-                "System blueprint"
+                "System blueprints"
             ],
             "progression": false,
             "useful": true
@@ -177,7 +177,7 @@
         {
             "name": "Shields blueprint",
             "category": [
-                "System blueprint"
+                "System blueprints"
             ],
             "progression": false,
             "useful": true
@@ -185,7 +185,7 @@
         {
             "name": "Weapon Control blueprint",
             "category": [
-                "System blueprint"
+                "System blueprints"
             ],
             "progression": false,
             "useful": true
@@ -193,8 +193,152 @@
         {
             "name": "Backup Battery blueprint",
             "category": [
-                "System blueprint"
+                "System blueprints"
             ],
+            "progression": true
+        },
+        {
+            "name": "Two achievements - Kestrel",
+            "category": [
+                "Events"
+            ],
+            "region": "Kestrel",
+            "progression": true
+        },
+        {
+            "name": "Two achievements - Engi",
+            "category": [
+                "Events"
+            ],
+            "region": "Engi",
+            "progression": true
+        },
+        {
+            "name": "Two achievements - Lanius",
+            "category": [
+                "Events"
+            ],
+            "region": "Lanius",
+            "progression": true
+        },
+        {
+            "name": "Two achievements - Mantis",
+            "category": [
+                "Events"
+            ],
+            "region": "Mantis",
+            "progression": true
+        },
+        {
+            "name": "Two achievements - Slug",
+            "category": [
+                "Events"
+            ],
+            "region": "Slug",
+            "progression": true
+        },
+        {
+            "name": "Two achievements - Rock",
+            "category": [
+                "Events"
+            ],
+            "region": "Rock",
+            "progression": true
+        },
+        {
+            "name": "Two achievements - Zoltan",
+            "category": [
+                "Events"
+            ],
+            "region": "Zoltan",
+            "progression": true
+        },
+        {
+            "name": "Two achievements - Crystal",
+            "category": [
+                "Events"
+            ],
+            "region": "Crystal",
+            "progression": true
+        },
+        {
+            "name": "Two achievements - Stealth",
+            "category": [
+                "Events"
+            ],
+            "region": "Stealth",
+            "progression": true
+        },
+        {
+            "name": "Two achievements - Federation",
+            "category": [
+                "Events"
+            ],
+            "region": "Federation",
+            "progression": true
+        },
+        {
+            "name": "Reach final sector - Kestrel B",
+            "category": [
+                "Events"
+            ],
+            "region": "Kestrel B",
+            "progression": true
+        },
+        {
+            "name": "Reach final sector - Engi B",
+            "category": [
+                "Events"
+            ],
+            "region": "Engi B",
+            "progression": true
+        },
+        {
+            "name": "Reach final sector - Federation B",
+            "category": [
+                "Events"
+            ],
+            "region": "Federation B",
+            "progression": true
+        },
+        {
+            "name": "Reach final sector - Zoltan B",
+            "category": [
+                "Events"
+            ],
+            "region": "Zoltan B",
+            "progression": true
+        },
+        {
+            "name": "Reach final sector - Stealth B",
+            "category": [
+                "Events"
+            ],
+            "region": "Stealth B",
+            "progression": true
+        },
+        {
+            "name": "Reach final sector - Rock B",
+            "category": [
+                "Events"
+            ],
+            "region": "Rock B",
+            "progression": true
+        },
+        {
+            "name": "Reach final sector - Slug B",
+            "category": [
+                "Events"
+            ],
+            "region": "Slug B",
+            "progression": true
+        },
+        {
+            "name": "Reach final sector - Mantis B",
+            "category": [
+                "Events"
+            ],
+            "region": "Mantis B",
             "progression": true
         }
     ]

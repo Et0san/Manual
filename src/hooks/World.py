@@ -1,7 +1,7 @@
 # Object classes from AP core, to represent an entire MultiWorld and this individual World that's part of it
 from typing import Any
 from worlds.AutoWorld import World
-from BaseClasses import MultiWorld, CollectionState, Item
+from BaseClasses import MultiWorld, CollectionState, Item, LocationProgressType
 
 # Object classes from Manual -- extending AP core -- representing items and locations that are used in generation
 from ..Items import ManualItem
@@ -54,24 +54,24 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int):
     for region in multiworld.regions:
         if region.player == player:
             for location in list(region.locations):
-                if location.category == "Sectors":
+                if get_category_of_location(location, world) == "Sectors":
                     if get_option_value(multiworld, player, "sectorsanity") == 2 or (get_option_value(multiworld, player, "sectorsanity") == 1 and (not location.name.endswith("Reach sector 5") and not location.name.endswith("Reach sector 8"))):
                         region.locations.remove(location)
-                if location.category == "Ship achievements":
+                if get_category_of_location(location, world) == "Ship achievements":
                     if get_option_value(multiworld, player, "ship_achievements") == 0:
                         region.locations.remove(location)
-                if location.category == "General achievements":
+                if get_category_of_location(location, world) == "General achievements":
                     if get_option_value(multiworld, player, "general_achievements") == 0:
                         region.locations.remove(location)
                         
                 # Also change location priorities based on options
-                if location.category == "Going the distance achievements":
+                if get_category_of_location(location, world) == "Going the distance achievements":
                     going_the_distance = get_option_value(multiworld, player, "going_the_distance")
                     if going_the_distance == 0:
                         region.locations.remove(location)
                     elif going_the_distance == 1:
                         location.progression = LocationProgressType.EXCLUDED
-                if location.category == "Ship and equipment feats":
+                if get_category_of_location(location, world) == "Ship and equipment feats":
                     ship_and_equipment_feats = get_option_value(multiworld, player, "ship_and_equipment_feats")
                     if ship_and_equipment_feats == 0:
                         region.locations.remove(location)
@@ -87,11 +87,15 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int):
 #       will create 5 items that are the "useful trap" class
 # {"Item Name": {ItemClassification.useful: 5}} <- You can also use the classification directly
 def before_create_items_all(item_config: dict[str, int|dict], world: World, multiworld: MultiWorld, player: int) -> dict[str, int|dict]:
-    starting_ship = "Kestrel"
-    if world.options.randomize_starting_ship.value == 1:
+    starting_ship_key = "Kestrel Key"
+    ship_keys = ["Kestrel Key", "Federation Key", "Engi Key", "Mantis Key", "Slug Key", "Rock Key", "Zoltan Key", "Lanius Key", "Stealth Key", "Crystal Key"]
+    
+    if get_option_value(multiworld, player, "starting_ship") == 0:
         import random
-        starting_ship = random.choice(list(region_table.keys()))
-    starting_ship_key = f"{starting_ship} Key"
+        starting_ship_key = random.choice(ship_keys)
+    else:
+        starting_ship_key = ship_keys[get_option_value(multiworld, player, "starting_ship")-1]
+    
     multiworld.push_precollected(multiworld.create_item(starting_ship_key, player))
     item_config[starting_ship_key] = 0
     if get_option_value(multiworld, player, "engines_blueprint_logic") == 2:
@@ -158,10 +162,14 @@ def after_set_rules(world: World, multiworld: MultiWorld, player: int):
     # OR
     # location.access_rule = lambda state: old_rule(state) or Example_Rule(state)
     
-    if get_option_value(multiworld, player, "goal") == 1:
+    # TODO fix completion condition
+
+    if get_option_value(multiworld, player, "goal") == 0:
         multiworld.completion_condition[player] = lambda state: state.count("Victory Token", player) >= get_option_value(multiworld, player, "ship_win_count")
-    else:
+    elif get_option_value(multiworld, player, "goal") == 1:
         multiworld.completion_condition[player] = lambda state: state.count("Victory Token", player) >= len(get_option_value(multiworld, player, "ship_win_selection"))
+    else:
+        raise Exception("Invalid goal option")
 
     for region in multiworld.regions:
         if region.player == player:
@@ -197,6 +205,13 @@ def after_create_item(item: ManualItem, world: World, multiworld: MultiWorld, pl
             item.early = True
     return item
 
+def get_category_of_location(location: ManualLocation, world: World) -> str:
+    categories = world.location_name_groups
+    for category, locations in categories.items():
+        if location.name in locations:
+            return category
+    return "Unknown"
+
 # This method is run towards the end of pre-generation, before the place_item options have been handled and before AP generation occurs
 def before_generate_basic(world: World, multiworld: MultiWorld, player: int):
     # Generate victory conditions
@@ -205,30 +220,29 @@ def before_generate_basic(world: World, multiworld: MultiWorld, player: int):
     for region in multiworld.regions:
         if region.player == player:
             for location in list(region.locations):
-                if location.category == "Ship victories":
+                if get_category_of_location(location, world) == "Ship victories":
                     victory_available.append(location)
 
     if get_option_value(multiworld, player, "goal") == 0:
         victories = get_option_value(multiworld, player, "ship_win_selection")
         for location in victory_available:
             if location.name in victories:
-                location.place_locked_item(world.create_item("Victory Token", player))
+                location.place_locked_item(multiworld.create_item("Victory Token", player))
     else:
         victory_count = get_option_value(multiworld, player, "ship_win_count")
         import random
         selected_victories = random.sample(victory_available, min(victory_count, len(victory_available)))
         for location in selected_victories:
-            location.place_locked_item(world.create_item("Victory Token", player))
+            location.place_locked_item(multiworld.create_item("Victory Token", player))
 
     # Generate events for region logic
     for region in multiworld.regions:
         if region.player == player:
             for location in list(region.locations):
-                if location.category == "Events":
-                    location.place_locked_item(world.create_item(location.name, player))
-
-    
-
+                if get_category_of_location(location, world) == "Events":
+                    item = multiworld.create_item(location.name, player)
+                    location.place_locked_item(item)
+                    multiworld.itempool.remove(item)
 
 # This method is run at the very end of pre-generation, once the place_item options have been handled and before AP generation occurs
 def after_generate_basic(world: World, multiworld: MultiWorld, player: int):

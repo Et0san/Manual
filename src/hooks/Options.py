@@ -30,17 +30,19 @@ class Goal(Choice):
     option_ship_win_selection = 1
     default = 0
 
-class ShipWinSelection(OptionSet):
-    """Select which ship layouts must win for the goal to be achieved. Only used if Victory condition is set to 'ship_win_selection'."""
-    display_name = "Victory condition: Ship layout selection"
-    valid_keys = ["Kestrel A", "Kestrel B", "Kestrel C", "Engi A", "Engi B", "Engi C", "Federation A", "Federation B", "Federation C", "Mantis A", "Mantis B", "Mantis C", "Zoltan A", "Zoltan B", "Zoltan C", "Slug A", "Slug B", "Slug C", "Rock A", "Rock B", "Rock C", "Stealth A", "Stealth B", "Stealth C", "Lanius A", "Lanius B", "Crystal A", "Crystal B"]
-
 class ShipWinCount(Range):
     """Select how many ship layouts must win for the goal to be achieved. Only used if Victory condition is set to 'ship_win_count'."""
     display_name = "Victory condition: Number of ship layouts"
     range_start = 1
     range_end = 28
     default = 1
+
+class ShipWinSelection(OptionSet):
+    """Select which ship layouts must win for the goal to be achieved. Only used if Victory condition is set to 'ship_win_selection'.
+    Valid keys: "Kestrel A", "Kestrel B", "Kestrel C", "Engi A", "Engi B", "Engi C", "Federation A", "Federation B", "Federation C", "Mantis A", "Mantis B", "Mantis C", "Zoltan A", "Zoltan B", "Zoltan C", "Slug A", "Slug B", "Slug C", "Rock A", "Rock B", "Rock C", "Stealth A", "Stealth B", "Stealth C", "Lanius A", "Lanius B", "Crystal A", "Crystal B"
+    """
+    display_name = "Victory condition: Ship layout selection"
+    valid_keys = ["Kestrel A", "Kestrel B", "Kestrel C", "Engi A", "Engi B", "Engi C", "Federation A", "Federation B", "Federation C", "Mantis A", "Mantis B", "Mantis C", "Zoltan A", "Zoltan B", "Zoltan C", "Slug A", "Slug B", "Slug C", "Rock A", "Rock B", "Rock C", "Stealth A", "Stealth B", "Stealth C", "Lanius A", "Lanius B", "Crystal A", "Crystal B"]
 
 class StartingShip(Choice):
     """Choose the starting ship."""
@@ -159,8 +161,8 @@ class WeaponsBlueprintLogic(Choice):
 # This is called before any manual options are defined, in case you want to define your own with a clean slate or let Manual define over them
 def before_options_defined(options: dict[str, Type[Option[Any]]]) -> dict[str, Type[Option[Any]]]:
     options["goal"] = Goal
-    options["ship_win_selection"] = ShipWinSelection
     options["ship_win_count"] = ShipWinCount
+    options["ship_win_selection"] = ShipWinSelection
     options["starting_ship"] = StartingShip
     options["sectorsanity"] = SectorSanity
     options["ship_achievements"] = ShipAchievements

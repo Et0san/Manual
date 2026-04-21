@@ -10,9 +10,15 @@
         
     },
     "Ship victories": {
-
+        "hidden": true
     },
     "Events": {
+        "hidden": true
+    },
+    "Ship keys": {
+        
+    },
+    "System blueprints": {
         
     }
 }

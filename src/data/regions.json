@@ -1,43 +1,43 @@
 {
     "$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.regions.schema.json",
     "Kestrel": {
-        "connects_to": ["Kestrel B", "Kestrel C", "Menu"],
+        "connects_to": ["Kestrel B", "Kestrel C"],
         "requires": "|Kestrel Key|"
     },
     "Engi": {
-        "connects_to": ["Engi B", "Engi C", "Menu"],
+        "connects_to": ["Engi B", "Engi C"],
         "requires": "|Engi Key| and |Drone Control blueprint|"
     },
     "Lanius": {
-        "connects_to": ["Lanius B", "Menu"],
+        "connects_to": ["Lanius B"],
         "requires": "|Lanius Key| and |Clone Bay blueprint| and |Hacking blueprint|"
     },
     "Mantis": {
-        "connects_to": ["Mantis B", "Mantis C", "Menu"],
+        "connects_to": ["Mantis B", "Mantis C"],
         "requires": "|Mantis Key| and |Crew Teleporter blueprint|"
     },
     "Slug": {
-        "connects_to": ["Slug B", "Slug C", "Menu"],
+        "connects_to": ["Slug B", "Slug C"],
         "requires": "|Slug Key|"
     },
     "Rock": {
-        "connects_to": ["Rock B", "Rock C", "Menu"],
+        "connects_to": ["Rock B", "Rock C"],
         "requires": "|Rock Key|"
     },
     "Zoltan": {
-        "connects_to": ["Zoltan B", "Zoltan C", "Menu"],
+        "connects_to": ["Zoltan B", "Zoltan C"],
         "requires": "|Zoltan Key|"
     },
     "Crystal": {
-        "connects_to": ["Crystal B", "Menu"],
+        "connects_to": ["Crystal B"],
         "requires": "|Crystal Key|"
     },
     "Stealth": {
-        "connects_to": ["Stealth B", "Stealth C", "Menu"],
+        "connects_to": ["Stealth B", "Stealth C"],
         "requires": "|Stealth Key| and |Cloaking blueprint|"
     },
     "Federation": {
-        "connects_to": ["Federation B", "Federation C", "Menu"],
+        "connects_to": ["Federation B", "Federation C"],
         "requires": "|Federation Key| and |Artillery Beam blueprint| and |Crew Teleporter blueprint|"
     },
     "Kestrel B": {
