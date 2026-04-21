@@ -40,7 +40,7 @@ class ShipWinCount(Range):
     display_name = "Victory condition: Number of ship layouts"
     range_start = 1
     range_end = 28
-    default = 3
+    default = 1
 
 class StartingShip(Choice):
     """Choose the starting ship."""

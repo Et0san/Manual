@@ -136,21 +136,29 @@ def after_set_rules(world: World, multiworld: MultiWorld, player: int):
     # OR
     # location.access_rule = lambda state: old_rule(state) or Example_Rule(state)
     
+    if get_option_value(multiworld, player, "goal") == 1:
+        multiworld.completion_condition[player] = lambda state: state.count("Victory Token", player) >= get_option_value(multiworld, player, "ship_win_count")
+    else:
+        multiworld.completion_condition[player] = lambda state: state.count("Victory Token", player) >= len(get_option_value(multiworld, player, "ship_win_selection"))
+
     for region in multiworld.regions:
         if region.player == player:
             for location in list(region.locations):
                 old_rule = location.access_rule
-                if world.options.medbay_blueprint_logic.value == 0:
+                if get_option_value(multiworld, player, "medbay_blueprint_logic") == 0:
                     if region.name in ["Crystal", "Crystal B", "Zoltan", "Zoltan B", "Mantis", "Mantis B", "Slug", "Kestrel", "Kestrel B", "Federation", "Federation B", "Engi", "Engi B","Stealth", "Stealth B", "Rock", "Rock B"]:
                         location.access_rule = lambda state: old_rule(state) and state.has("Medbay blueprint", player)
 
-                if world.options.sensors_blueprint_logic.value == 0:
+                if get_option_value(multiworld, player, "sensors_blueprint_logic") == 0:
                     if region.name not in ["Slug", "Slug B", "Slug C", "Engi B", "Stealth C", "Mantis", "Lanius B"]:
                         location.access_rule = lambda state: old_rule(state) and state.has("Sensors blueprint", player)
 
-                if world.options.shields_blueprint_logic.value == 0:
+                if get_option_value(multiworld, player, "shields_blueprint_logic") == 0:
                     if region.name not in ["Stealth", "Stealth B", "Stealth C"]:
                         location.access_rule = lambda state: old_rule(state) and state.has("Shields blueprint", player)
+
+                if location.name == "__Manual Game Complete__":
+                    location.access_rule = multiworld.completion_condition[player]
 
 # The item name to create is provided before the item is created, in case you want to make changes to it
 def before_create_item(item_name: str, world: World, multiworld: MultiWorld, player: int) -> str:
@@ -162,7 +170,36 @@ def after_create_item(item: ManualItem, world: World, multiworld: MultiWorld, pl
 
 # This method is run towards the end of pre-generation, before the place_item options have been handled and before AP generation occurs
 def before_generate_basic(world: World, multiworld: MultiWorld, player: int):
-    pass
+    # Generate victory conditions
+    victory_available = []
+    
+    for region in multiworld.regions:
+        if region.player == player:
+            for location in list(region.locations):
+                if location.category == "Ship victory":
+                    victory_available.append(location)
+
+    if get_option_value(multiworld, player, "goal") == 0:
+        victories = get_option_value(multiworld, player, "ship_win_selection")
+        for location in victory_available:
+            if location.name in victories:
+                location.place_locked_item(world.create_item("Victory Token", player))
+    else:
+        victory_count = get_option_value(multiworld, player, "ship_win_count")
+        import random
+        selected_victories = random.sample(victory_available, min(victory_count, len(victory_available)))
+        for location in selected_victories:
+            location.place_locked_item(world.create_item("Victory Token", player))
+
+    # Generate events for region logic
+    for region in multiworld.regions:
+        if region.player == player:
+            for location in list(region.locations):
+                if location.category == "Event":
+                    location.place_locked_item(world.create_item(location.name, player))
+
+    
+
 
 # This method is run at the very end of pre-generation, once the place_item options have been handled and before AP generation occurs
 def after_generate_basic(world: World, multiworld: MultiWorld, player: int):
