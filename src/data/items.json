@@ -4,7 +4,7 @@
         {
             "name": "Victory Token",
             "category": [
-                "Ship victories"
+                "Victory tokens"
             ],
             "progression": true,
             "count": 0
@@ -89,7 +89,7 @@
         {
             "name": "Cloaking blueprint",
             "category": [
-                "System blueprints"
+                "System blueprints", "KestrelBlueprints"
             ],
             "progression": true
         },
@@ -103,14 +103,14 @@
         {
             "name": "Crew Teleporter blueprint",
             "category": [
-                "System blueprints"
+                "System blueprints", "KestrelBlueprints"
             ],
             "progression": true
         },
         {
             "name": "Drone Control blueprint",
             "category": [
-                "System blueprints"
+                "System blueprints", "KestrelBlueprints"
             ],
             "progression": true
         },
@@ -124,7 +124,7 @@
         {
             "name": "Hacking blueprint",
             "category": [
-                "System blueprints"
+                "System blueprints", "KestrelBlueprints"
             ],
             "progression": true
         },
@@ -138,10 +138,9 @@
         {
             "name": "Mind Control blueprint",
             "category": [
-                "System blueprints"
+                "System blueprints", "KestrelBlueprints"
             ],
-            "progression": false,
-            "useful": true
+            "progression_skip_balancing": true
         },
         {
             "name": "Oxygen blueprint",
@@ -156,7 +155,7 @@
             "category": [
                 "System blueprints"
             ],
-            "progression": false,
+            "progression_skip_balancing": true,
             "useful": true
         },
         {
@@ -164,7 +163,7 @@
             "category": [
                 "System blueprints"
             ],
-            "progression": false,
+            "progression_skip_balancing": true,
             "useful": true
         },
         {
@@ -201,14 +200,14 @@
         {
             "name": "Backup Battery blueprint",
             "category": [
-                "System blueprints"
+                "System blueprints", "KestrelBlueprints"
             ],
             "progression": true
         },
         {
             "name": "Two achievements - Kestrel",
             "category": [
-                "Events"
+                "Event outcomes"
             ],
             "region": "Kestrel",
             "progression": true
@@ -216,7 +215,7 @@
         {
             "name": "Two achievements - Engi",
             "category": [
-                "Events"
+                "Event outcomes"
             ],
             "region": "Engi",
             "progression": true
@@ -224,7 +223,7 @@
         {
             "name": "Two achievements - Lanius",
             "category": [
-                "Events"
+                "Event outcomes"
             ],
             "region": "Lanius",
             "progression": true
@@ -232,7 +231,7 @@
         {
             "name": "Two achievements - Mantis",
             "category": [
-                "Events"
+                "Event outcomes"
             ],
             "region": "Mantis",
             "progression": true
@@ -240,7 +239,7 @@
         {
             "name": "Two achievements - Slug",
             "category": [
-                "Events"
+                "Event outcomes"
             ],
             "region": "Slug",
             "progression": true
@@ -248,7 +247,7 @@
         {
             "name": "Two achievements - Rock",
             "category": [
-                "Events"
+                "Event outcomes"
             ],
             "region": "Rock",
             "progression": true
@@ -256,7 +255,7 @@
         {
             "name": "Two achievements - Zoltan",
             "category": [
-                "Events"
+                "Event outcomes"
             ],
             "region": "Zoltan",
             "progression": true
@@ -264,7 +263,7 @@
         {
             "name": "Two achievements - Crystal",
             "category": [
-                "Events"
+                "Event outcomes"
             ],
             "region": "Crystal",
             "progression": true
@@ -272,7 +271,7 @@
         {
             "name": "Two achievements - Stealth",
             "category": [
-                "Events"
+                "Event outcomes"
             ],
             "region": "Stealth",
             "progression": true
@@ -280,7 +279,7 @@
         {
             "name": "Two achievements - Federation",
             "category": [
-                "Events"
+                "Event outcomes"
             ],
             "region": "Federation",
             "progression": true
@@ -288,7 +287,7 @@
         {
             "name": "Reach final sector - Kestrel B",
             "category": [
-                "Events"
+                "Event outcomes"
             ],
             "region": "Kestrel B",
             "progression": true
@@ -296,7 +295,7 @@
         {
             "name": "Reach final sector - Engi B",
             "category": [
-                "Events"
+                "Event outcomes"
             ],
             "region": "Engi B",
             "progression": true
@@ -304,7 +303,7 @@
         {
             "name": "Reach final sector - Federation B",
             "category": [
-                "Events"
+                "Event outcomes"
             ],
             "region": "Federation B",
             "progression": true
@@ -312,7 +311,7 @@
         {
             "name": "Reach final sector - Zoltan B",
             "category": [
-                "Events"
+                "Event outcomes"
             ],
             "region": "Zoltan B",
             "progression": true
@@ -320,7 +319,7 @@
         {
             "name": "Reach final sector - Stealth B",
             "category": [
-                "Events"
+                "Event outcomes"
             ],
             "region": "Stealth B",
             "progression": true
@@ -328,7 +327,7 @@
         {
             "name": "Reach final sector - Rock B",
             "category": [
-                "Events"
+                "Event outcomes"
             ],
             "region": "Rock B",
             "progression": true
@@ -336,7 +335,7 @@
         {
             "name": "Reach final sector - Slug B",
             "category": [
-                "Events"
+                "Event outcomes"
             ],
             "region": "Slug B",
             "progression": true
@@ -344,7 +343,7 @@
         {
             "name": "Reach final sector - Mantis B",
             "category": [
-                "Events"
+                "Event outcomes"
             ],
             "region": "Mantis B",
             "progression": true

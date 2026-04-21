@@ -9,16 +9,139 @@
     "Sectors": {
         
     },
+    "KestrelBlueprints": {
+        "hidden": true
+    },
     "Ship victories": {
         "hidden": true
     },
+    "Victory tokens": {
+        "hidden": true
+    },
     "Events": {
+        "hidden": true
+    },
+    "Event outcomes": {
         "hidden": true
     },
     "Ship keys": {
         
     },
     "System blueprints": {
+        
+    },
+    "Kestrel - Any": {
+        
+    },
+    "Kestrel A": {
+        
+    },
+    "Kestrel B": {
+        
+    },
+    "Kestrel C": {
+        
+    },
+    "Engi - Any": {
+        
+    },
+    "Engi A": {
+        
+    },
+    "Engi B": {
+        
+    },
+    "Engi C": {
+        
+    },
+    "Lanius - Any": {
+        
+    },
+    "Lanius A": {
+        
+    },
+    "Lanius B": {
+        
+    },
+    "Mantis - Any": {
+        
+    },
+    "Mantis A": {
+        
+    },
+    "Mantis B": {
+        
+    },
+    "Mantis C": {
+        
+    },
+    "Slug - Any": {
+        
+    },
+    "Slug A": {
+        
+    },
+    "Slug B": {
+        
+    },
+    "Slug C": {
+        
+    },
+    "Rock - Any": {
+        
+    },
+    "Rock A": {
+        
+    },
+    "Rock B": {
+        
+    },
+    "Rock C": {
+        
+    },
+    "Zoltan - Any": {
+        
+    },
+    "Zoltan A": {
+        
+    },
+    "Zoltan B": {
+        
+    },
+    "Zoltan C": {
+        
+    },
+    "Crystal - Any": {
+        
+    },
+    "Crystal A": {
+        
+    },
+    "Crystal B": {
+        
+    },
+    "Stealth - Any": {
+        
+    },
+    "Stealth A": {
+        
+    },
+    "Stealth B": {
+        
+    },
+    "Stealth C": {
+        
+    },
+    "Federation - Any": {
+        
+    },
+    "Federation A": {
+        
+    },
+    "Federation B": {
+        
+    },
+    "Federation C": {
         
     }
 }

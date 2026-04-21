@@ -54,24 +54,24 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int):
     for region in multiworld.regions:
         if region.player == player:
             for location in list(region.locations):
-                if get_category_of_location(location, world) == "Sectors":
+                if location_in_category(location, world, "Sectors"):
                     if get_option_value(multiworld, player, "sectorsanity") == 2 or (get_option_value(multiworld, player, "sectorsanity") == 1 and (not location.name.endswith("Reach sector 5") and not location.name.endswith("Reach sector 8"))):
                         region.locations.remove(location)
-                if get_category_of_location(location, world) == "Ship achievements":
+                if location_in_category(location, world, "Ship achievements"):
                     if get_option_value(multiworld, player, "ship_achievements") == 0:
                         region.locations.remove(location)
-                if get_category_of_location(location, world) == "General achievements":
+                if location_in_category(location, world, "General achievements"):
                     if get_option_value(multiworld, player, "general_achievements") == 0:
                         region.locations.remove(location)
                         
                 # Also change location priorities based on options
-                if get_category_of_location(location, world) == "Going the distance achievements":
+                if location_in_category(location, world, "Going the distance achievements"):
                     going_the_distance = get_option_value(multiworld, player, "going_the_distance")
                     if going_the_distance == 0:
                         region.locations.remove(location)
                     elif going_the_distance == 1:
                         location.progression = LocationProgressType.EXCLUDED
-                if get_category_of_location(location, world) == "Ship and equipment feats":
+                if location_in_category(location, world, "Ship and equipment feats"):
                     ship_and_equipment_feats = get_option_value(multiworld, player, "ship_and_equipment_feats")
                     if ship_and_equipment_feats == 0:
                         region.locations.remove(location)
@@ -87,23 +87,70 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int):
 #       will create 5 items that are the "useful trap" class
 # {"Item Name": {ItemClassification.useful: 5}} <- You can also use the classification directly
 def before_create_items_all(item_config: dict[str, int|dict], world: World, multiworld: MultiWorld, player: int) -> dict[str, int|dict]:
+    # Define ship requirements
+    ship_requirements = {
+        "Kestrel Key": [],
+        "Engi Key": ["Drone Control blueprint"],
+        "Lanius Key": ["Clone Bay blueprint", "Hacking blueprint"],
+        "Mantis Key": ["Crew Teleporter blueprint"],
+        "Slug Key": [],
+        "Rock Key": [],
+        "Zoltan Key": [],
+        "Crystal Key": [],
+        "Stealth Key": ["Cloaking blueprint"],
+        "Federation Key": ["Artillery Beam blueprint", "Crew Teleporter blueprint"]
+    }
+    
+    # Collect all items that will be in starting inventory
+    starting_inventory = set()
+    if get_option_value(multiworld, player, "shields_blueprint_logic") == 2:
+        starting_inventory.add("Shields blueprint")
+    if get_option_value(multiworld, player, "sensors_blueprint_logic") == 2:
+        starting_inventory.add("Sensors blueprint")
+    if get_option_value(multiworld, player, "medbay_blueprint_logic") == 2:
+        starting_inventory.add("Medbay blueprint")
+    if get_option_value(multiworld, player, "engines_blueprint_logic") == 2:
+        starting_inventory.add("Engines blueprint")
+    if get_option_value(multiworld, player, "weapons_blueprint_logic") == 2:
+        starting_inventory.add("Weapons blueprint")
+    
+    # Select starting ship
     starting_ship_key = "Kestrel Key"
-    ship_keys = ["Kestrel Key", "Federation Key", "Engi Key", "Mantis Key", "Slug Key", "Rock Key", "Zoltan Key", "Lanius Key", "Stealth Key", "Crystal Key"]
+    ship_keys = ["Kestrel Key", "Engi Key", "Federation Key", "Mantis Key", "Zoltan Key", "Slug Key", "Rock Key", "Stealth Key", "Lanius Key", "Crystal Key"]
     
     if get_option_value(multiworld, player, "starting_ship") == 0:
+        # Random ship selection - only choose ships whose blueprint requirements are met
         import random
-        starting_ship_key = random.choice(ship_keys)
+        available_ships = []
+        for ship_key in ship_keys:
+            required_blueprints = ship_requirements[ship_key]
+            if all(blueprint in starting_inventory for blueprint in required_blueprints):
+                available_ships.append(ship_key)
+        
+        if available_ships:
+            starting_ship_key = random.choice(available_ships)
+        else:
+            # Fallback to Kestrel if no ships are available (shouldn't happen)
+            starting_ship_key = "Kestrel Key"
     else:
-        starting_ship_key = ship_keys[get_option_value(multiworld, player, "starting_ship")-1]
+        starting_ship_key = ship_keys[get_option_value(multiworld, player, "starting_ship") - 1]
     
-    multiworld.push_precollected(multiworld.create_item(starting_ship_key, player))
-    item_config[starting_ship_key] = 0
-    if get_option_value(multiworld, player, "engines_blueprint_logic") == 2:
-        multiworld.push_precollected(multiworld.create_item("Engines blueprint", player))
-        item_config["Engines blueprint"] = 0
-    if get_option_value(multiworld, player, "weapons_blueprint_logic") == 2:
-        multiworld.push_precollected(multiworld.create_item("Weapons blueprint", player))
-        item_config["Weapons blueprint"] = 0
+    # Track items already given
+    items_to_precollect = set()
+    items_to_precollect.add(starting_ship_key)
+    
+    # Add required blueprints for the starting ship
+    for blueprint in ship_requirements[starting_ship_key]:
+        items_to_precollect.add(blueprint)
+    
+    # Add start_with blueprints
+    items_to_precollect.update(starting_inventory)
+    
+    # Push all precollected items and remove from pool
+    for item_name in items_to_precollect:
+        multiworld.push_precollected(multiworld.create_item(item_name, player))
+        item_config[item_name] = 0
+    
     return item_config
 
 # The item pool before starting items are processed, in case you want to see the raw item pool at that stage
@@ -203,12 +250,12 @@ def after_create_item(item: ManualItem, world: World, multiworld: MultiWorld, pl
             item.early = True
     return item
 
-def get_category_of_location(location: ManualLocation, world: World) -> str:
+def location_in_category(location: ManualLocation, world: World, category_name: str) -> bool:
     categories = world.location_name_groups
-    for category, locations in categories.items():
-        if location.name in locations:
-            return category
-    return "Unknown"
+    if category_name in categories:
+        if location.name in categories[category_name]:
+            return True
+    return False
 
 # This method is run towards the end of pre-generation, before the place_item options have been handled and before AP generation occurs
 def before_generate_basic(world: World, multiworld: MultiWorld, player: int):
@@ -218,7 +265,7 @@ def before_generate_basic(world: World, multiworld: MultiWorld, player: int):
     for region in multiworld.regions:
         if region.player == player:
             for location in list(region.locations):
-                if get_category_of_location(location, world) == "Ship victories":
+                if location_in_category(location, world, "Ship victories"):
                     victory_available.append(location)
 
     if get_option_value(multiworld, player, "goal") == 1:
@@ -239,7 +286,7 @@ def before_generate_basic(world: World, multiworld: MultiWorld, player: int):
     for region in multiworld.regions:
         if region.player == player:
             for location in list(region.locations):
-                if get_category_of_location(location, world) == "Events":
+                if location_in_category(location, world, "Events"):
                     item = multiworld.create_item(location.name, player)
                     location.place_locked_item(item)
                     multiworld.itempool.remove(item)

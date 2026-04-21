@@ -45,7 +45,9 @@ class ShipWinSelection(OptionSet):
     valid_keys = ["Kestrel A", "Kestrel B", "Kestrel C", "Engi A", "Engi B", "Engi C", "Federation A", "Federation B", "Federation C", "Mantis A", "Mantis B", "Mantis C", "Zoltan A", "Zoltan B", "Zoltan C", "Slug A", "Slug B", "Slug C", "Rock A", "Rock B", "Rock C", "Stealth A", "Stealth B", "Stealth C", "Lanius A", "Lanius B", "Crystal A", "Crystal B"]
 
 class StartingShip(Choice):
-    """Choose the starting ship."""
+    """Choose the starting ship.
+    Selecting a ship with required blueprints will give you those blueprints at the start, whatever options you set for that blueprint afterwards.
+    Choosing random selects a random ship among those without any required blueprints, or only requiring blueprints added in your starting inventory."""
     display_name = "Starting ship"
     option_random = 0
     option_kestrel = 1

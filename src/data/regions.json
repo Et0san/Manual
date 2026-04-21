@@ -2,43 +2,53 @@
     "$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.regions.schema.json",
     "Kestrel": {
         "connects_to": ["Kestrel B", "Kestrel C"],
-        "requires": "|Kestrel Key|"
+        "requires": "|Kestrel Key|",
+        "starting": true
     },
     "Engi": {
         "connects_to": ["Engi B", "Engi C"],
-        "requires": "|Engi Key| and |Drone Control blueprint|"
+        "requires": "|Engi Key| and |Drone Control blueprint|",
+        "starting": true
     },
     "Lanius": {
         "connects_to": ["Lanius B"],
-        "requires": "|Lanius Key| and |Clone Bay blueprint| and |Hacking blueprint|"
+        "requires": "|Lanius Key| and |Clone Bay blueprint| and |Hacking blueprint|",
+        "starting": true
     },
     "Mantis": {
         "connects_to": ["Mantis B", "Mantis C"],
-        "requires": "|Mantis Key| and |Crew Teleporter blueprint|"
+        "requires": "|Mantis Key| and |Crew Teleporter blueprint|",
+        "starting": true
     },
     "Slug": {
         "connects_to": ["Slug B", "Slug C"],
-        "requires": "|Slug Key|"
+        "requires": "|Slug Key|",
+        "starting": true
     },
     "Rock": {
         "connects_to": ["Rock B", "Rock C"],
-        "requires": "|Rock Key|"
+        "requires": "|Rock Key|",
+        "starting": true
     },
     "Zoltan": {
         "connects_to": ["Zoltan B", "Zoltan C"],
-        "requires": "|Zoltan Key|"
+        "requires": "|Zoltan Key|",
+        "starting": true
     },
     "Crystal": {
         "connects_to": ["Crystal B"],
-        "requires": "|Crystal Key|"
+        "requires": "|Crystal Key|",
+        "starting": true
     },
     "Stealth": {
         "connects_to": ["Stealth B", "Stealth C"],
-        "requires": "|Stealth Key| and |Cloaking blueprint|"
+        "requires": "|Stealth Key| and |Cloaking blueprint|",
+        "starting": true
     },
     "Federation": {
         "connects_to": ["Federation B", "Federation C"],
-        "requires": "|Federation Key| and |Artillery Beam blueprint| and |Crew Teleporter blueprint|"
+        "requires": "|Federation Key| and |Artillery Beam blueprint| and |Crew Teleporter blueprint|",
+        "starting": true
     },
     "Kestrel B": {
         "requires": "|Two achievements - Kestrel|"
