@@ -50,15 +50,33 @@ def before_create_regions(world: World, multiworld: MultiWorld, player: int):
 # Called after regions and locations are created, in case you want to see or modify that information. Victory location is included.
 def after_create_regions(world: World, multiworld: MultiWorld, player: int):
     # Use this hook to remove locations from the world
-    locationNamesToRemove: list[str] = [] # List of location names
-
-    # Add your code here to calculate which locations to remove
-
+    
     for region in multiworld.regions:
         if region.player == player:
             for location in list(region.locations):
-                if location.name in locationNamesToRemove:
-                    region.locations.remove(location)
+                if location.category == "Sectors":
+                    if get_option_value(multiworld, player, "sectorsanity") == 2 or (get_option_value(multiworld, player, "sectorsanity") == 1 and (not location.name.endswith("Reach sector 5") and not location.name.endswith("Reach sector 8"))):
+                        region.locations.remove(location)
+                if location.category == "Ship achievements":
+                    if get_option_value(multiworld, player, "ship_achievements") == 0:
+                        region.locations.remove(location)
+                if location.category == "General achievements":
+                    if get_option_value(multiworld, player, "general_achievements") == 0:
+                        region.locations.remove(location)
+                        
+                # Also change location priorities based on options
+                if location.category == "Going the distance achievements":
+                    going_the_distance = get_option_value(multiworld, player, "going_the_distance")
+                    if going_the_distance == 0:
+                        region.locations.remove(location)
+                    elif going_the_distance == 1:
+                        location.progression = LocationProgressType.EXCLUDED
+                if location.category == "Ship and equipment feats":
+                    ship_and_equipment_feats = get_option_value(multiworld, player, "ship_and_equipment_feats")
+                    if ship_and_equipment_feats == 0:
+                        region.locations.remove(location)
+                    elif ship_and_equipment_feats == 1:
+                        location.progression = LocationProgressType.EXCLUDED
 
 # This hook allows you to access the item names & counts before the items are created. Use this to increase/decrease the amount of a specific item in the pool
 # Valid item_config key/values:
@@ -69,15 +87,19 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int):
 #       will create 5 items that are the "useful trap" class
 # {"Item Name": {ItemClassification.useful: 5}} <- You can also use the classification directly
 def before_create_items_all(item_config: dict[str, int|dict], world: World, multiworld: MultiWorld, player: int) -> dict[str, int|dict]:
-    starting_ship = "Kestrel A"
+    starting_ship = "Kestrel"
     if world.options.randomize_starting_ship.value == 1:
-            import random
-            starting_ship = random.choice(list(region_table.keys()))
-
+        import random
+        starting_ship = random.choice(list(region_table.keys()))
     starting_ship_key = f"{starting_ship} Key"
     multiworld.push_precollected(multiworld.create_item(starting_ship_key, player))
-    # Remove it from the pool
     item_config[starting_ship_key] = 0
+    if get_option_value(multiworld, player, "engines_blueprint_logic") == 2:
+        multiworld.push_precollected(multiworld.create_item("Engines blueprint", player))
+        item_config["Engines blueprint"] = 0
+    if get_option_value(multiworld, player, "weapons_blueprint_logic") == 2:
+        multiworld.push_precollected(multiworld.create_item("Weapons blueprint", player))
+        item_config["Weapons blueprint"] = 0
     return item_config
 
 # The item pool before starting items are processed, in case you want to see the raw item pool at that stage
@@ -166,6 +188,13 @@ def before_create_item(item_name: str, world: World, multiworld: MultiWorld, pla
 
 # The item that was created is provided after creation, in case you want to modify the item
 def after_create_item(item: ManualItem, world: World, multiworld: MultiWorld, player: int) -> ManualItem:
+    if get_option_value(multiworld, player, "engines_blueprint_logic") == 1:
+        if item.name == "Engines blueprint":
+            item.early = True
+
+    if get_option_value(multiworld, player, "weapons_blueprint_logic") == 1:
+        if item.name == "Weapons blueprint":
+            item.early = True
     return item
 
 # This method is run towards the end of pre-generation, before the place_item options have been handled and before AP generation occurs
@@ -176,7 +205,7 @@ def before_generate_basic(world: World, multiworld: MultiWorld, player: int):
     for region in multiworld.regions:
         if region.player == player:
             for location in list(region.locations):
-                if location.category == "Ship victory":
+                if location.category == "Ship victories":
                     victory_available.append(location)
 
     if get_option_value(multiworld, player, "goal") == 0:
@@ -195,7 +224,7 @@ def before_generate_basic(world: World, multiworld: MultiWorld, player: int):
     for region in multiworld.regions:
         if region.player == player:
             for location in list(region.locations):
-                if location.category == "Event":
+                if location.category == "Events":
                     location.place_locked_item(world.create_item(location.name, player))
 
     

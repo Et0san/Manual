@@ -2,203 +2,77 @@
     "$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.items.schema.json",
     "data": [
         {
-            "name": "Kestrel A Key",
+            "name": "Kestrel Key",
             "category": [
                 "Ship key"
             ],
             "progression": true
         },
         {
-            "name": "Kestrel B Key",
+            "name": "Engi Key",
             "category": [
                 "Ship key"
             ],
             "progression": true
         },
         {
-            "name": "Kestrel C Key",
+            "name": "Lanius Key",
             "category": [
                 "Ship key"
             ],
             "progression": true
         },
         {
-            "name": "Engi A Key",
+            "name": "Federation Key",
             "category": [
                 "Ship key"
             ],
             "progression": true
         },
         {
-            "name": "Engi B Key",
+            "name": "Rock Key",
             "category": [
                 "Ship key"
             ],
             "progression": true
         },
         {
-            "name": "Engi C Key",
+            "name": "Slug Key",
             "category": [
                 "Ship key"
             ],
             "progression": true
         },
         {
-            "name": "Lanius A Key",
+            "name": "Mantis Key",
             "category": [
                 "Ship key"
             ],
             "progression": true
         },
         {
-            "name": "Lanius B Key",
+            "name": "Stealth Key",
             "category": [
                 "Ship key"
             ],
             "progression": true
         },
         {
-            "name": "Federation A Key",
+            "name": "Zoltan Key",
             "category": [
                 "Ship key"
             ],
             "progression": true
         },
         {
-            "name": "Federation B Key",
+            "name": "Crystal Key",
             "category": [
                 "Ship key"
             ],
             "progression": true
         },
         {
-            "name": "Federation C Key",
-            "category": [
-                "Ship key"
-            ],
-            "progression": true
-        },
-        {
-            "name": "Rock A Key",
-            "category": [
-                "Ship key"
-            ],
-            "progression": true
-        },
-        {
-            "name": "Rock B Key",
-            "category": [
-                "Ship key"
-            ],
-            "progression": true
-        },
-        {
-            "name": "Rock C Key",
-            "category": [
-                "Ship key"
-            ],
-            "progression": true
-        },
-        {
-            "name": "Slug A Key",
-            "category": [
-                "Ship key"
-            ],
-            "progression": true
-        },
-        {
-            "name": "Slug B Key",
-            "category": [
-                "Ship key"
-            ],
-            "progression": true
-        },
-        {
-            "name": "Slug C Key",
-            "category": [
-                "Ship key"
-            ],
-            "progression": true
-        },
-        {
-            "name": "Mantis A Key",
-            "category": [
-                "Ship key"
-            ],
-            "progression": true
-        },
-        {
-            "name": "Mantis B Key",
-            "category": [
-                "Ship key"
-            ],
-            "progression": true
-        },
-        {
-            "name": "Mantis C Key",
-            "category": [
-                "Ship key"
-            ],
-            "progression": true
-        },
-        {
-            "name": "Stealth A Key",
-            "category": [
-                "Ship key"
-            ],
-            "progression": true
-        },
-        {
-            "name": "Stealth B Key",
-            "category": [
-                "Ship key"
-            ],
-            "progression": true
-        },
-        {
-            "name": "Stealth C Key",
-            "category": [
-                "Ship key"
-            ],
-            "progression": true
-        },
-        {
-            "name": "Zoltan A Key",
-            "category": [
-                "Ship key"
-            ],
-            "progression": true
-        },
-        {
-            "name": "Zoltan B Key",
-            "category": [
-                "Ship key"
-            ],
-            "progression": true
-        },
-        {
-            "name": "Zoltan C Key",
-            "category": [
-                "Ship key"
-            ],
-            "progression": true
-        },
-        {
-            "name": "Crystal A Key",
-            "category": [
-                "Ship key"
-            ],
-            "progression": true
-        },
-        {
-            "name": "Crystal B Key",
-            "category": [
-                "Ship key"
-            ],
-            "progression": true
-        },
-        {
-            "name": "Artillery beam blueprint",
+            "name": "Artillery Beam blueprint",
             "category": [
                 "System blueprint"
             ],

@@ -1,47 +1,43 @@
 {
     "$schema": "https://github.com/ManualForArchipelago/Manual/raw/main/schemas/Manual.regions.schema.json",
-    "Menu":{
-        "starting": true,
-        "connects_to": ["Kestrel", "Engi", "Lanius", "Mantis", "Slug", "Rock", "Zoltan", "Crystal", "Stealth", "Federation"]
-    },
     "Kestrel": {
-        "connects_to": ["Kestrel B", "Kestrel C"],
+        "connects_to": ["Kestrel B", "Kestrel C", "Menu"],
         "requires": "|Kestrel Key|"
     },
     "Engi": {
-        "connects_to": ["Engi B", "Engi C"],
+        "connects_to": ["Engi B", "Engi C", "Menu"],
         "requires": "|Engi Key| and |Drone Control blueprint|"
     },
     "Lanius": {
-        "connects_to": ["Lanius B"],
+        "connects_to": ["Lanius B", "Menu"],
         "requires": "|Lanius Key| and |Clone Bay blueprint| and |Hacking blueprint|"
     },
     "Mantis": {
-        "connects_to": ["Mantis B", "Mantis C"],
+        "connects_to": ["Mantis B", "Mantis C", "Menu"],
         "requires": "|Mantis Key| and |Crew Teleporter blueprint|"
     },
     "Slug": {
-        "connects_to": ["Slug B", "Slug C"],
+        "connects_to": ["Slug B", "Slug C", "Menu"],
         "requires": "|Slug Key|"
     },
     "Rock": {
-        "connects_to": ["Rock B", "Rock C"],
+        "connects_to": ["Rock B", "Rock C", "Menu"],
         "requires": "|Rock Key|"
     },
     "Zoltan": {
-        "connects_to": ["Zoltan B", "Zoltan C"],
+        "connects_to": ["Zoltan B", "Zoltan C", "Menu"],
         "requires": "|Zoltan Key|"
     },
     "Crystal": {
-        "connects_to": ["Crystal B"],
+        "connects_to": ["Crystal B", "Menu"],
         "requires": "|Crystal Key|"
     },
     "Stealth": {
-        "connects_to": ["Stealth B", "Stealth C"],
+        "connects_to": ["Stealth B", "Stealth C", "Menu"],
         "requires": "|Stealth Key| and |Cloaking blueprint|"
     },
     "Federation": {
-        "connects_to": ["Federation B", "Federation C"],
+        "connects_to": ["Federation B", "Federation C", "Menu"],
         "requires": "|Federation Key| and |Artillery Beam blueprint| and |Crew Teleporter blueprint|"
     },
     "Kestrel B": {

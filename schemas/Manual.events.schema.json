@@ -19,7 +19,7 @@
         "_comment": {"$ref": "#/definitions/comment"}
     },
     "definitions": {
-        "Event": {
+        "Events": {
             "type": "object",
             "properties": {
                 "name": {

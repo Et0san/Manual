@@ -31,12 +31,12 @@ class Goal(Choice):
     default = 0
 
 class ShipWinSelection(OptionSet):
-    """Select which ship layouts must win for the goal to be achieved. Only used if Victory condition is set to 'Selected ship layouts each won a run'."""
+    """Select which ship layouts must win for the goal to be achieved. Only used if Victory condition is set to 'ship_win_selection'."""
     display_name = "Victory condition: Ship layout selection"
     valid_keys = ["Kestrel A", "Kestrel B", "Kestrel C", "Engi A", "Engi B", "Engi C", "Federation A", "Federation B", "Federation C", "Mantis A", "Mantis B", "Mantis C", "Zoltan A", "Zoltan B", "Zoltan C", "Slug A", "Slug B", "Slug C", "Rock A", "Rock B", "Rock C", "Stealth A", "Stealth B", "Stealth C", "Lanius A", "Lanius B", "Crystal A", "Crystal B"]
 
 class ShipWinCount(Range):
-    """Select how many ship layouts must win for the goal to be achieved. Only used if Victory condition is set to 'Win with a certain number of ship layouts'."""
+    """Select how many ship layouts must win for the goal to be achieved. Only used if Victory condition is set to 'ship_win_count'."""
     display_name = "Victory condition: Number of ship layouts"
     range_start = 1
     range_end = 28
@@ -71,20 +71,20 @@ class SectorSanity(Choice):
 
 class ShipAchievements(Toggle):
     """Whether ship achievements are checks."""
-    display_name = "Ship achievements checks"
+    display_name = "Ship achievement checks"
     default = True
 
 class GeneralAchievements(Toggle):
     """Whether general achievements are checks."""
-    display_name = "General achievements checks"
+    display_name = "General achievement checks"
     default = True
 
 class GoingTheDistance(Choice):
     """Second row of general achievements are harder. Set the type of items that can be sent if they do send checks, and whether they are checks at all.
      off: Going the distance achievements are not checks.
      unprioritized: Going the distance achievements are checks, but may not contain progression items.
-     normal: Going the distance achievements may contain progression items."""
-    display_name = "Going the distance achievements checks"
+     normal: Going the distance may contain progression items."""
+    display_name = "Going the distance achievement checks"
     option_off = 0
     option_unprioritized = 1
     option_normal = 2
@@ -95,7 +95,7 @@ class ShipAndEquipmentFeats(Choice):
      off: Ship and equipment feats are not checks.
      unprioritized: Ship and equipment feats are checks, but may not contain progression items.
      normal: Ship and equipment feats may contain progression items."""
-    display_name = "Ship and equipment feats checks"
+    display_name = "Ship and equipment feat checks"
     option_off = 0
     option_unprioritized = 1
     option_normal = 2
@@ -162,7 +162,7 @@ def before_options_defined(options: dict[str, Type[Option[Any]]]) -> dict[str, T
     options["ship_win_selection"] = ShipWinSelection
     options["ship_win_count"] = ShipWinCount
     options["starting_ship"] = StartingShip
-    options["sector_sanity"] = SectorSanity
+    options["sectorsanity"] = SectorSanity
     options["ship_achievements"] = ShipAchievements
     options["general_achievements"] = GeneralAchievements
     options["going_the_distance"] = GoingTheDistance
