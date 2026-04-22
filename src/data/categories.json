@@ -60,7 +60,7 @@
         "default": 0,
         "hidden": true
     },
-	"Mod: Promods Southeern Region": {
+	"Mod: Promods Southern Region": {
         "yaml_option": ["enable_promods_southern_region"],
         "default": 0,
         "hidden": true

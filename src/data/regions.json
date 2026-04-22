@@ -605,5 +605,13 @@
         "connects_to": [
             "Kazakshtan"
         ]
+    },
+    "Lebanon": {
+        "requires": "|Lebanon Key|",
+        "connects_to": [
+            "Syria",
+            "Israel",
+            "Cyprus"
+        ]
     }
 }

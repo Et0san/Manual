@@ -390,6 +390,12 @@
 			"count":  1,
 			"category": ["Country Keys", "Mod: Promods Southern Region"],
 			"progression": true
+		},
+		{    
+			"name": "Lebanon Key",
+			"count":  1,
+			"category": ["Country Keys", "Mod: Promods Middle-East"],
+			"progression": true
 		}
 	]
 }
