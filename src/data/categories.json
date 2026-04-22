@@ -55,6 +55,21 @@
         "default": 0,
         "hidden": true
     },
+	"Mod: Promods Middle-East": {
+        "yaml_option": ["enable_promods_middle_east"],
+        "default": 0,
+        "hidden": true
+    },
+	"Mod: Promods Southeern Region": {
+        "yaml_option": ["enable_promods_southern_region"],
+        "default": 0,
+        "hidden": true
+    },
+	"Mod: Promods Maghreb": {
+        "yaml_option": ["enable_promods_maghreb"],
+        "default": 0,
+        "hidden": true
+    },
     "Photo Trophy": {
         "yaml_option": ["enable_photosanity"],
         "default": 0,

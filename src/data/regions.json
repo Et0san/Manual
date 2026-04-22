@@ -172,7 +172,9 @@
             "Ireland",
             "Jersey",
             "Guernesey",
-            "Monaco"
+            "Monaco",
+			"Morocco",
+			"Tunisia"
         ]
     },
     "Greece": {
@@ -246,7 +248,8 @@
             "Croatia",
             "Albania",
             "Greece",
-            "Malta"
+            "Malta", 
+			"Tunisia"
         ]
     },
     "Jersey": {
@@ -464,7 +467,8 @@
             "Italy",
             "Portugal",
             "United Kingdom",
-            "Andorra"
+            "Andorra",
+			"Morocco"
         ]
     },
     "Sweden": {
@@ -502,7 +506,8 @@
             "Bulgaria",
             "Greece",
             "Georgia",
-            "Cyprus"
+            "Cyprus",
+			"Syria"
         ]
     },
     "United Kingdom": {
@@ -595,7 +600,12 @@
         
         "connects_to": [
             "Greece",
-            "Türkiye"
+            "Türkiye",
+			"Egypt",
+			"Israel",
+			"Lebanon",
+			"Syria"
+			
         ]
     },
     "Moldova": {
@@ -619,6 +629,107 @@
             "Moldova",
             "Georgia",
             "Russia"
+        ]
+    },
+    "Morocco": {
+        
+        "requires": "|Morocco Key|",
+        
+        "connects_to": [
+            "Spain",
+			"France"
+        ]
+    },
+    "Tunisia": {
+        
+        "requires": "|Tunisia Key|",
+        
+        "connects_to": [
+            "Italy", 
+			"France"
+        ]
+	},
+    "Iraq": {
+        
+        "requires": "|Iraq Key|",
+        
+        "connects_to": [
+            "Jordan", 
+			"Syria"
+        ]
+	},
+    "Israel": {
+        
+        "requires": "|Israel Key|",
+        
+        "connects_to": [
+            "West Bank", 
+			"Jordan", 
+			"Egypt", 
+			"Syria", 
+			"Lebanon",
+			"Cyprus"
+        ]
+	},
+    "Jordan": {
+        
+        "requires": "|Jordan Key|",
+        
+        "connects_to": [
+            "West Bank", 
+			"Israel", 
+			"Iraq", 
+			"Syria",
+			"Egypt"
+        ]
+
+	},
+    "Syria": {
+        
+        "requires": "|Syria Key|",
+        
+        "connects_to": [
+            "Türkiye", 
+			"Cyprus", 
+			"Lebanon", 
+			"Jordan", 
+			"Iraq"
+        ]
+	},
+    "West Bank": {
+        
+        "requires": "|West Bank Key|",
+        
+        "connects_to": [
+            "Israel", 
+			"Jordan"
+        ]
+	},
+    "Egypt": {
+        
+        "requires": "|Egypt Key|",
+        
+        "connects_to": [
+            "Cyprus", 
+			"Jordan",
+			"Israel"
+        ]
+	},
+    "Kazakshtan": {
+        
+        "requires": "|Kazakshtan Key|",
+        
+        "connects_to": [
+            "Azerbaijan", 
+			"Uzbekistan"
+        ]
+	},
+    "Uzbekistan": {
+        
+        "requires": "|Uzbekistan Key|",
+        
+        "connects_to": [
+            "Kazakshtan"
         ]
     }
 }

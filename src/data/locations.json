@@ -6079,6 +6079,46 @@
 		},
 		{
 			
+			"name": "City: Kormorniki",
+			
+			"requires": [],
+			
+			"region": "Poland",
+			
+			"category": ["Poland", "Mod: Promods Europe"]
+		},
+		{
+			
+			"name": "City: Konin",
+			
+			"requires": [],
+			
+			"region": "Poland",
+			
+			"category": ["Poland", "Mod: Promods Europe"]
+		},
+		{
+			
+			"name": "City: Luboń",
+			
+			"requires": [],
+			
+			"region": "Poland",
+			
+			"category": ["Poland", "Mod: Promods Europe"]
+		},
+				{
+			
+			"name": "City: Września",
+			
+			"requires": [],
+			
+			"region": "Poland",
+			
+			"category": ["Poland", "Mod: Promods Europe"]
+		},
+		{
+			
 			"name": "City: Poznań",
 			
 			"requires": [],
@@ -9638,6 +9678,1076 @@
 			"region": "Georgia",
 			
 			"category": ["Georgia", "Mod: Promods Europe"]
+		}
+		{
+			
+			"name": "City: Arish",
+			
+			"requires": [],
+			
+			"region": "Egypt",
+			
+			"category": ["Egypt", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Damietta",
+			
+			"requires": [],
+			
+			"region": "Egypt",
+			
+			"category": ["Egypt", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Port Said",
+			
+			"requires": [],
+			
+			"region": "Egypt",
+			
+			"category": ["Egypt", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Taba",
+			
+			"requires": [],
+			
+			"region": "Egypt",
+			
+			"category": ["Egypt", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Al Nukhib",
+			
+			"requires": [],
+			
+			"region": "Iraq",
+			
+			"category": ["Iraq", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Al-Qa'im",
+			
+			"requires": [],
+			
+			"region": "Iraq",
+			
+			"category": ["Iraq", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Ar-Rutbah",
+			
+			"requires": [],
+			
+			"region": "Iraq",
+			
+			"category": ["Iraq", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Baiji",
+			
+			"requires": [],
+			
+			"region": "Iraq",
+			
+			"category": ["Iraq", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Haditha",
+			
+			"requires": [],
+			
+			"region": "Iraq",
+			
+			"category": ["Iraq", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Hit",
+			
+			"requires": [],
+			
+			"region": "Iraq",
+			
+			"category": ["Iraq", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Afula",
+			
+			"requires": [],
+			
+			"region": "Israel",
+			
+			"category": ["Israel", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Akko",
+			
+			"requires": [],
+			
+			"region": "Israel",
+			
+			"category": ["Israel", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Ashdod",
+			
+			"requires": [],
+			
+			"region": "Israel",
+			
+			"category": ["Israel", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Ashkelon",
+			
+			"requires": [],
+			
+			"region": "Israel",
+			
+			"category": ["Israel", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Beer Sheva",
+			
+			"requires": [],
+			
+			"region": "Israel",
+			
+			"category": ["Israel", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Bet She'an",
+			
+			"requires": [],
+			
+			"region": "Israel",
+			
+			"category": ["Israel", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Dimona",
+			
+			"requires": [],
+			
+			"region": "Israel",
+			
+			"category": ["Israel", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Eilat",
+			
+			"requires": [],
+			
+			"region": "Israel",
+			
+			"category": ["Israel", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Ein Gedi",
+			
+			"requires": [],
+			
+			"region": "Israel",
+			
+			"category": ["Israel", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Hadera",
+			
+			"requires": [],
+			
+			"region": "Israel",
+			
+			"category": ["Israel", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Haifa",
+			
+			"requires": [],
+			
+			"region": "Israel",
+			
+			"category": ["Israel", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Herzliya",
+			
+			"requires": [],
+			
+			"region": "Israel",
+			
+			"category": ["Israel", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Kiryat Shmona",
+			
+			"requires": [],
+			
+			"region": "Israel",
+			
+			"category": ["Israel", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Mitzpe Ramon",
+			
+			"requires": [],
+			
+			"region": "Israel",
+			
+			"category": ["Israel", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Nazareth",
+			
+			"requires": [],
+			
+			"region": "Israel",
+			
+			"category": ["Israel", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Netanya",
+			
+			"requires": [],
+			
+			"region": "Israel",
+			
+			"category": ["Israel", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Rishon LeZion",
+			
+			"requires": [],
+			
+			"region": "Israel",
+			
+			"category": ["Israel", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Tel Aviv",
+			
+			"requires": [],
+			
+			"region": "Israel",
+			
+			"category": ["Israel", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Tiberias",
+			
+			"requires": [],
+			
+			"region": "Israel",
+			
+			"category": ["Israel", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Al-Karak",
+			
+			"requires": [],
+			
+			"region": "Jordan",
+			
+			"category": ["Jordan", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Amman",
+			
+			"requires": [],
+			
+			"region": "Jordan",
+			
+			"category": ["Jordan", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Aqaba",
+			
+			"requires": [],
+			
+			"region": "Jordan",
+			
+			"category": ["Jordan", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Irbid",
+			
+			"requires": [],
+			
+			"region": "Jordan",
+			
+			"category": ["Jordan", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Jerash",
+			
+			"requires": [],
+			
+			"region": "Jordan",
+			
+			"category": ["Jordan", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Ma'an",
+			
+			"requires": [],
+			
+			"region": "Jordan",
+			
+			"category": ["Jordan", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Madaba",
+			
+			"requires": [],
+			
+			"region": "Jordan",
+			
+			"category": ["Jordan", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Mafraq",
+			
+			"requires": [],
+			
+			"region": "Jordan",
+			
+			"category": ["Jordan", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Ruwaished",
+			
+			"requires": [],
+			
+			"region": "Jordan",
+			
+			"category": ["Jordan", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Safawi",
+			
+			"requires": [],
+			
+			"region": "Jordan",
+			
+			"category": ["Jordan", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Zarqa",
+			
+			"requires": [],
+			
+			"region": "Jordan",
+			
+			"category": ["Jordan", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Ashat",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Aktau",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Aktobe",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Alga",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Atyrau",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Beyneu",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Dossor",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Inderborsky",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Kandyagash",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Karabalyk",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Karabutak",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Kendirli",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Khromtau",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Kobda",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Kostanay",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Kulsary",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Kuryk",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Lisakovsk",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Makat",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Mangystau",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Martuk",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Mukur",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Oral",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Rudny",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Say-Otes",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Shetpe",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Shubarkuduk",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Temir",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Temirbek Zhurgenov",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Tobol",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Turysh",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Zatobolsk",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Zhanaozen",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Zhympity",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Baalbek",
+			
+			"requires": [],
+			
+			"region": "Lebanon",
+			
+			"category": ["Lebanon", "Mod: Promods Middle-East"]
+		}
+				{
+			
+			"name": "City: Beirut",
+			
+			"requires": [],
+			
+			"region": "Lebanon",
+			
+			"category": ["Lebanon", "Mod: Promods Middle-East"]
+		}
+				{
+			
+			"name": "City: Byblos",
+			
+			"requires": [],
+			
+			"region": "Lebanon",
+			
+			"category": ["Lebanon", "Mod: Promods Middle-East"]
+		}
+				{
+			
+			"name": "City: Nabatieh",
+			
+			"requires": [],
+			
+			"region": "Lebanon",
+			
+			"category": ["Lebanon", "Mod: Promods Middle-East"]
+		}
+				{
+			
+			"name": "City: Sidon",
+			
+			"requires": [],
+			
+			"region": "Lebanon",
+			
+			"category": ["Lebanon", "Mod: Promods Middle-East"]
+		}
+				{
+			
+			"name": "City: Tripoli",
+			
+			"requires": [],
+			
+			"region": "Lebanon",
+			
+			"category": ["Lebanon", "Mod: Promods Middle-East"]
+		}
+				{
+			
+			"name": "City: Tyre",
+			
+			"requires": [],
+			
+			"region": "Lebanon",
+			
+			"category": ["Lebanon", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Zahlé",
+			
+			"requires": [],
+			
+			"region": "Lebanon",
+			
+			"category": ["Lebanon", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Haql",
+			
+			"requires": [],
+			
+			"region": "Jordan",
+			
+			"category": ["Jordan", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Al-Sanamayn",
+			
+			"requires": [],
+			
+			"region": "Syria",
+			
+			"category": ["Syria", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Damascus",
+			
+			"requires": [],
+			
+			"region": "Syria",
+			
+			"category": ["Syria", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Deraa",
+			
+			"requires": [],
+			
+			"region": "Syria",
+			
+			"category": ["Syria", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Izra",
+			
+			"requires": [],
+			
+			"region": "Syria",
+			
+			"category": ["Syria", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Latakia",
+			
+			"requires": [],
+			
+			"region": "Syria",
+			
+			"category": ["Syria", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Tartus",
+			
+			"requires": [],
+			
+			"region": "Syria",
+			
+			"category": ["Syria", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Bethlehem",
+			
+			"requires": [],
+			
+			"region": "West Bank",
+			
+			"category": ["West Bank", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Jericho",
+			
+			"requires": [],
+			
+			"region": "West Bank",
+			
+			"category": ["West Bank", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Ramallah",
+			
+			"requires": [],
+			
+			"region": "West Bank",
+			
+			"category": ["West Bank", "Mod: Promods Middle-East"]
+		}
+		{
+			
+			"name": "City: Garabogaz",
+			
+			"requires": [],
+			
+			"region": "Kazakshtan",
+			
+			"category": ["Kazakshtan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Jasliq",
+			
+			"requires": [],
+			
+			"region": "Uzbekistan",
+			
+			"category": ["Uzbekistan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Karakalpakstan",
+			
+			"requires": [],
+			
+			"region": "Uzbekistan",
+			
+			"category": ["Uzbekistan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Qirqqiz",
+			
+			"requires": [],
+			
+			"region": "Uzbekistan",
+			
+			"category": ["Uzbekistan", "Mod: Promods Southern Region"]
+		}
+		{
+			
+			"name": "City: Kénitra",
+			
+			"requires": [],
+			
+			"region": "Morocco",
+			
+			"category": ["Morocco", "Mod: Promods Maghreb"]
+		}
+		{
+			
+			"name": "City: Ksar El Kbir",
+			
+			"requires": [],
+			
+			"region": "Morocco",
+			
+			"category": ["Morocco", "Mod: Promods Maghreb"]
+		}
+		{
+			
+			"name": "City: Larache",
+			
+			"requires": [],
+			
+			"region": "Morocco",
+			
+			"category": ["Morocco", "Mod: Promods Maghreb"]
+		}
+		{
+			
+			"name": "City: Port Med Tangier",
+			
+			"requires": [],
+			
+			"region": "Morocco",
+			
+			"category": ["Morocco", "Mod: Promods Maghreb"]
+		}
+		{
+			
+			"name": "City: Rabat",
+			
+			"requires": [],
+			
+			"region": "Morocco",
+			
+			"category": ["Morocco", "Mod: Promods Maghreb"]
+		}
+		{
+			
+			"name": "City: Salé",
+			
+			"requires": [],
+			
+			"region": "Morocco",
+			
+			"category": ["Morocco", "Mod: Promods Maghreb"]
+		}
+		{
+			
+			"name": "City: Tangier",
+			
+			"requires": [],
+			
+			"region": "Morocco",
+			
+			"category": ["Morocco", "Mod: Promods Maghreb"]
+		}
+		{
+			
+			"name": "City: Tétouan",
+			
+			"requires": [],
+			
+			"region": "Morocco",
+			
+			"category": ["Morocco", "Mod: Promods Maghreb"]
+		}
+		{
+			
+			"name": "City: Enfidha",
+			
+			"requires": [],
+			
+			"region": "Tunisia",
+			
+			"category": ["Tunisia", "Mod: Promods Maghreb"]
+		}
+		{
+			
+			"name": "City: Tunis",
+			
+			"requires": [],
+			
+			"region": "Tunisia",
+			
+			"category": ["Tunisia", "Mod: Promods Maghreb"]
+		}
+		{
+			
+			"name": "City: Utique",
+			
+			"requires": [],
+			
+			"region": "Tunisia",
+			
+			"category": ["Tunisia", "Mod: Promods Maghreb"]
 		}
 	]
 }

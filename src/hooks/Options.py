@@ -53,7 +53,7 @@ class DLC_France(Toggle):
     default = 0
 
 class DLC_Italia(Toggle):
-    """Enables Vive la France ! DLC content."""
+    """Enables Italia DLC content."""
     display_name = "DLC: Italia"
     default = 0
 
@@ -92,6 +92,21 @@ class MOD_PromodsEurope(Toggle):
     display_name = "MOD: Promods Europe"
     default = 0
 
+class MOD_PromodsMiddleEast(Toggle):
+    """Enables Promods Middle-East content."""
+    display_name = "MOD: Promods Middle-East"
+    default = 0
+
+class MOD_PromodsSouthernRegion(Toggle):
+    """Enables Promods Southern Region content."""
+    display_name = "MOD: Promods Southern Region"
+    default = 0
+
+class MOD_PromodsMaghreb(Toggle):
+    """Enables Promods Maghreb content."""
+    display_name = "MOD: Promods Maghreb"
+    default = 0
+
 class Photosanity(Toggle):
     """Enables Photo Trophy content as locations."""
     display_name = "Photo Trophy"
@@ -122,6 +137,9 @@ def before_options_defined(options: dict[str, Type[Option[Any]]]) -> dict[str, T
     options["enable_greece"] = DLC_Greece
     options["enable_nordic_horizons"] = DLC_NordicHorizons
     options["enable_promods_europe"] = MOD_PromodsEurope
+    options["enable_promods_middle_east"] = MOD_PromodsMiddleEast
+    options["enable_promods_southern_region"] = MOD_PromodsSouthernRegion
+    options["enable_promods_maghreb"] = MOD_PromodsMaghreb
     options["enable_photosanity"] = Photosanity
     options["enable_viewpointsanity"] = Viewpointsanity
     options["enable_location_scouts"] = LocationScouts

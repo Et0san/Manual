@@ -537,6 +537,97 @@
 			"category": ["Country Keys", "Mod: Promods Europe"],
 
 			"progression": true
+		},
+		{    
+			"name": "Iraq Key",
+
+			"count":  1,
+
+			"category": ["Country Keys", "Mod: Promods Middle-East"],
+
+			"progression": true
+		},
+		{    
+			"name": "Israel Key",
+
+			"count":  1,
+
+			"category": ["Country Keys", "Mod: Promods Middle-East"],
+
+			"progression": true
+		},
+		{    
+			"name": "Jordan Key",
+
+			"count":  1,
+
+			"category": ["Country Keys", "Mod: Promods Middle-East"],
+
+			"progression": true
+		},
+		{    
+			"name": "Kazakshtan Key",
+
+			"count":  1,
+
+			"category": ["Country Keys", "Mod: Promods Southern Region"],
+
+			"progression": true
+		},
+		{    
+			"name": "Syria Key",
+
+			"count":  1,
+
+			"category": ["Country Keys", "Mod: Promods Middle-East"],
+
+			"progression": true
+		},
+		{    
+			"name": "West Bank Key",
+
+			"count":  1,
+
+			"category": ["Country Keys", "Mod: Promods Middle-East"],
+
+			"progression": true
+		},
+		{    
+			"name": "Morocco Key",
+
+			"count":  1,
+
+			"category": ["Country Keys", "Mod: Promods Maghreb"],
+
+			"progression": true
+		},
+		{    
+			"name": "Tunisia Key",
+
+			"count":  1,
+
+			"category": ["Country Keys", "Mod: Promods Maghreb"],
+
+			"progression": true
+		},
+		{    
+			"name": "Egypt Key",
+
+			"count":  1,
+
+			"category": ["Country Keys", "Mod: Promods Middle-East"],
+
+			"progression": true
+		},
+		{    
+			"name": "Uzbekistan Key",
+
+			"count":  1,
+
+			"category": ["Country Keys", "Mod: Promods Southern Region"],
+
+			"progression": true
 		}
+		
 	]
 }
