@@ -291,15 +291,15 @@ def before_generate_basic(world: World, multiworld: MultiWorld, player: int):
                     location.place_locked_item(item)
                     multiworld.itempool.remove(item)
 
-    # Remove victory tokens from the item pool, since they have been placed at victory locations; and replace them with filler items to keep the item count consistent
-    # victory_tokens = 0
-    # for item in multiworld.itempool:
-    #     if item.name == "Victory Token" and item.player == player:
-    #         multiworld.itempool.remove(item)
-    #         victory_tokens += 1
-
-    # for _ in range(victory_tokens):
-    #     multiworld.itempool.append(multiworld.create_item(world.filler_item_name, player))
+    item_count = len(list(filter(lambda i: i.player == player, multiworld.itempool)))
+    location_count = len(multiworld.get_unfilled_locations(player))
+    to_remove = item_count - location_count
+    for item in multiworld.itempool:
+        if item.player == player:
+            if item.classification == 0: # filler item
+                if to_remove > 0:
+                    to_remove -= 1
+                    multiworld.itempool.remove(item)
 
 # This method is run at the very end of pre-generation, once the place_item options have been handled and before AP generation occurs
 def after_generate_basic(world: World, multiworld: MultiWorld, player: int):
