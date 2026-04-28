@@ -4,8 +4,7 @@
 A Manual game is a custom game that you've set an item list and location list for so that any game can be included in a multiworld game. You'll manually mark locations checked, and you'll manually restrict what items you use based on the items you've been sent. 
 
 ## Where is the settings page?
-The player settings page for this game is located <a href="../player-settings">here</a>. It contains all the options
-you need to configure and export a config file.
+There is no settings page yet. For now, you will need to install the APWorld (putting it in `custom_worlds` or letting the Archipelago Launcher do it for you), then `Generate Template Options` in the Archipelago Launcher.
 
 ## What does randomization do to this game?
 You may only play with unlocked ships, and only if you have blueprints for all their starting systems. You may only buy or upgrade a system if you got the blueprint for it (Honor system). If an event gives it to you randomly, congrats! You got it out of logic, but you're still missing the blueprint to upgrade it.
